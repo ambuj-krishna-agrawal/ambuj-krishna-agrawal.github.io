@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ambuj-krishna-agrawal.github.io/static/css/main.43f0e2c8.css",
-    "main.js": "/ambuj-krishna-agrawal.github.io/static/js/main.2d94bab8.js",
-    "static/js/787.1ed0c42c.chunk.js": "/ambuj-krishna-agrawal.github.io/static/js/787.1ed0c42c.chunk.js",
-    "index.html": "/ambuj-krishna-agrawal.github.io/index.html",
-    "main.43f0e2c8.css.map": "/ambuj-krishna-agrawal.github.io/static/css/main.43f0e2c8.css.map",
-    "main.2d94bab8.js.map": "/ambuj-krishna-agrawal.github.io/static/js/main.2d94bab8.js.map",
-    "787.1ed0c42c.chunk.js.map": "/ambuj-krishna-agrawal.github.io/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.43f0e2c8.css",
+    "main.js": "/static/js/main.8b412644.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "index.html": "/index.html",
+    "main.43f0e2c8.css.map": "/static/css/main.43f0e2c8.css.map",
+    "main.8b412644.js.map": "/static/js/main.8b412644.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43f0e2c8.css",
-    "static/js/main.2d94bab8.js"
+    "static/js/main.8b412644.js"
   ]
 }
