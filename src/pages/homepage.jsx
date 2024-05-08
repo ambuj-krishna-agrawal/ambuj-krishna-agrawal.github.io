@@ -20,8 +20,10 @@ import AllProjects from "../components/projects/allProjects";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
+import myEducation from "../data/education";
 
 import "./styles/homepage.css";
+import Education from "../components/education/education";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -166,32 +168,49 @@ const Homepage = () => {
 							</a>
 						</div>
 
-						<div className="homepage-projects">
+						{/* <div className="homepage-projects">
 							<AllProjects />
-						</div>
+						</div> */}
 
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
+						{/* <div className="homepage-after-title"> */}
+							<div className="homepage-education">
+							<h2 className="education-header">Education</h2>
+								{myEducation.map((education, index) => (
 									<div
-										className="homepage-article"
+										className="homepage-education"
 										key={(index + 1).toString()}
 									>
-										<Article
+										<Education
 											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
+											date={education().date}
+											title={education().title}
+											description={education().description}
 										/>
 									</div>
 								))}
 							</div>
 
-							<div className="homepage-works">
-								<Works />
+							<div className="homepage-education">
+							<h2 className="education-header">Education</h2>
+								{myEducation.map((education, index) => (
+									<div
+										className="homepage-education"
+										key={(index + 1).toString()}
+									>
+										<Education
+											key={(index + 1).toString()}
+											date={education().date}
+											title={education().title}
+											description={education().description}
+										/>
+									</div>
+								))}
 							</div>
-						</div>
+
+							{/* <div className="homepage-works">
+								<Works />
+							</div> */}
+						{/* </div> */}
 
 						<div className="page-footer">
 							<Footer />

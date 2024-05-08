@@ -7,9 +7,13 @@ import INFO from "../../data/user";
 import "./styles/allProjects.css";
 
 const AllProjects = () => {
-	return (
-		<div className="all-projects-container">
-			{INFO.projects.map((project, index) => (
+    const projectsByCompany = [
+		{ companyName: "Cred", projects: INFO.cred_projects }
+    ];
+
+    return (
+        <div className="all-projects-container">
+			{INFO.cred_projects.map((project, index) => (
 				<div className="all-projects-project" key={index}>
 					<Project
 						logo={project.logo}
@@ -21,7 +25,7 @@ const AllProjects = () => {
 				</div>
 			))}
 		</div>
-	);
+    );
 };
 
 export default AllProjects;

@@ -71,7 +71,9 @@
 
 .homepage-after-title {
 	display: flex;
+	justify-content: space-between; 
 }
+
 
 .homepage-projects {
 	flex-basis: 300px;
@@ -91,6 +93,15 @@
 .homepage-works {
 	flex-basis: 600px;
 	padding-top: 30px;
+}
+
+.education-header {
+    color: #333; /* Change the color as per your design */
+    font-size: 20px; /* Change the font size as per your design */
+	margin-top: 30px;
+    margin-bottom: 20px; /* Change the margin as per your design */
+    text-align: left; /* Change the alignment as per your design */
+	font-family: var(--primary-font);
 }
 
 @media (max-width: 1024px) {
@@ -142,9 +153,22 @@
 		flex-basis: auto;
 	}
 
+	.homepage-education {
+		flex-basis: auto;
+	}
+
 	.homepage-works {
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;
+	}
+
+	.education-header {
+		color: #333; /* Change the color as per your design */
+		font-size: 12px; 
+		margin-top: 10 px;/* Change the font size as per your design */
+		margin-bottom: 10px; /* Change the margin as per your design */
+		text-align: center; /* Change the alignment as per your design */
+		font-family: var(--primary-font);
 	}
 }

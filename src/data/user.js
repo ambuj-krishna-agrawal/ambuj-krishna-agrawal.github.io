@@ -33,7 +33,7 @@ const INFO = {
 			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
 	},
 
-	projects: [
+	cred_projects: [
 		{
 			title: "Project 1",
 			description:
