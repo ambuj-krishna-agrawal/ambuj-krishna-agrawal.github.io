@@ -23,12 +23,12 @@ const NavBar = (props) => {
 							</li>
 							<li
 								className={
-									active === "about"
+									active === "articles"
 										? "nav-item active"
 										: "nav-item"
 								}
 							>
-								<Link to="/about">About</Link>
+								<Link to="/articles">Research</Link>
 							</li>
 							<li
 								className={
@@ -41,21 +41,12 @@ const NavBar = (props) => {
 							</li>
 							<li
 								className={
-									active === "articles"
+									active === "about"
 										? "nav-item active"
 										: "nav-item"
 								}
 							>
-								<Link to="/articles">Articles</Link>
-							</li>
-							<li
-								className={
-									active === "contact"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/contact">Contact</Link>
+								<Link to="/about">About me</Link>
 							</li>
 						</ul>
 					</div>

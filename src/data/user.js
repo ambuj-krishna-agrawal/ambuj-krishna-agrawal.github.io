@@ -1,8 +1,8 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Portfolio",
+		name: "Ambuj Krishna Agrawal",
+		email: "ambujagrawal741@gmail.com",
 		logo: "../logo.png",
 	},
 
@@ -16,21 +16,21 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Machine Learning Researcher and Backend Developer",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I am a backend developer with 3 years of industry experience with microservices and building scalable consumer products. I also work in the domain of machine learning primarily Natural Language Processing (NLP) and aim to ultimately work in the intesection of healthcare, AI and Software Development",
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "Hello, I'm Ambuj",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"I've worked in the tech industry for 3 years, primarily in backend development and machine learning. I'm passionate about building scalable consumer products and pushing the boundaries of what's possible. I'm also a machine learning researcher and have published papers in top-tier conferences. I'm passionate about the intersection of healthcare, AI and software development.",
 	},
 
 	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
+		title: "My research focuses on Natural Language Processing and Machine Learning.",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"My objective is to search for ways to solve the most pressing issues in healthcare using AI and software.",
 	},
 
 	cred_projects: [
