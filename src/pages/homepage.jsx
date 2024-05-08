@@ -23,7 +23,8 @@ import myArticles from "../data/articles";
 import myEducation from "../data/education";
 
 import "./styles/homepage.css";
-import Education from "../components/education/education";
+import Education from "../components/homepage/education";
+import myWork from "../data/work";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -191,8 +192,8 @@ const Homepage = () => {
 							</div>
 
 							<div className="homepage-education">
-							<h2 className="education-header">Education</h2>
-								{myEducation.map((education, index) => (
+							<h2 className="education-header">Work Experience</h2>
+								{myWork.map((education, index) => (
 									<div
 										className="homepage-education"
 										key={(index + 1).toString()}
