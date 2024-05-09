@@ -2,7 +2,7 @@ import React from "react";
 
 function education_1() {
 	return {
-		date: "7 May 2017 - 7 May 2021",
+		date: "2017",
 		title: "Undergraduate B.Tech in Information Technology",
 		description:
 			"Undergraduate degree with honors (8.82/10 GPA) in Information Technology from Indian Institute of Information Technology, Allahabad.",

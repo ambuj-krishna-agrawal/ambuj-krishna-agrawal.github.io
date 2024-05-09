@@ -24,6 +24,7 @@
 
 .homepage-education-date {
 	opacity: 0.7;
+    text-align: left;
 	color: #606060;
 	font-size: 12px;
 	margin-bottom: 1em;
@@ -55,6 +56,13 @@
 .homepage-education-link a {
 	color: var(--link-color);
 	text-decoration: none;
+}
+
+.homepage-vertical-bar {
+    width: 1px;
+    background-color: #000; /* Black color for the bar */
+    height: 100px; /* Adjust according to your content's height */
+    margin-right: 20px; /* Space between the bar and the text */
 }
 
 @media (max-width: 600px) {

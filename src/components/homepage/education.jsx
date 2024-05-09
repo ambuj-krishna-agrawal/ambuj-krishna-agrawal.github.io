@@ -17,6 +17,7 @@ const Education = (props) => {
 					<div className="homepage-education-date">
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
+                    <div class="vertical-bar"></div>
 					<div className="homepage-education-title">{title}</div>
 					<div className="homepage-education-description">
 						{description}
