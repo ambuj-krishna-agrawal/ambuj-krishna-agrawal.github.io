@@ -6,6 +6,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/education.css";
 
+
 const Education = (props) => {
 	const { title, description, date } = props;
 

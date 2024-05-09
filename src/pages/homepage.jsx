@@ -173,7 +173,7 @@ const Homepage = () => {
 							<AllProjects />
 						</div> */}
 
-						{/* <div className="homepage-after-title"> */}
+						<div className="homepage-after-title">
 							<div className="homepage-education">
 							<h2 className="education-header">Education</h2>
 								{myEducation.map((education, index) => (
@@ -191,18 +191,18 @@ const Homepage = () => {
 								))}
 							</div>
 
-							<div className="homepage-education">
-							<h2 className="education-header">Work Experience</h2>
-								{myWork.map((education, index) => (
+							<div className="homepage-work">
+							<h2 className="work-header">Work Experience</h2>
+								{myWork.map((work, index) => (
 									<div
-										className="homepage-education"
+										className="homepage-work"
 										key={(index + 1).toString()}
 									>
-										<Education
+										<Works
 											key={(index + 1).toString()}
-											date={education().date}
-											title={education().title}
-											description={education().description}
+											date={work().date}
+											title={work().title}
+											description={work().description}
 										/>
 									</div>
 								))}
@@ -211,7 +211,7 @@ const Homepage = () => {
 							{/* <div className="homepage-works">
 								<Works />
 							</div> */}
-						{/* </div> */}
+						</div>
 
 						<div className="page-footer">
 							<Footer />
