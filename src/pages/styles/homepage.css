@@ -53,9 +53,10 @@
 
 .homepage-socials {
 	display: flex;
-	justify-content: left;
+	justify-content: flex-end;
 	align-items: center;
-	padding-top: 30px;
+	padding-top: 20px;
+	padding-right: 60px;
 }
 
 .homepage-social-icon {
@@ -98,13 +99,17 @@
 .education-header {
     color: #003366;
     font-size: 20px; /* Change the font size as per your design */
-	margin-top: 50px;
     margin-bottom: 20px; /* Change the margin as per your design */
     text-align: left; /* Change the alignment as per your design */
 	font-family: var(--primary-font);
 }
 
 @media (max-width: 1024px) {
+
+	.homepage-socials {
+        padding-right: 30px; /* adjust as needed */
+    }
+
 	.homepage-first-area {
 		flex-direction: column;
 	}
@@ -161,14 +166,5 @@
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;
-	}
-
-	.education-header {
-		color: #333; /* Change the color as per your design */
-		font-size: 12px; 
-		margin-top: 20 px;/* Change the font size as per your design */
-		margin-bottom: 10px; /* Change the margin as per your design */
-		text-align: center; /* Change the alignment as per your design */
-		font-family: var(--primary-font);
 	}
 }
