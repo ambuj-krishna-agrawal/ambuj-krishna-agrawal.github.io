@@ -44,13 +44,11 @@
 }
 
 
-@import "../../../data/styles.css";
-
 .homepage-works {
 	width: 90%;
 	mix-blend-mode: normal;
 	border-radius: 20px;
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .homepage-works:hover {
@@ -63,17 +61,23 @@
 	padding: 30px;
 }
 
-.homepage-works-date {
+.homepage-works-date:hover {
 	opacity: 1;
-	color: var(--tertiary-color);
+    font-weight: 400;
+}
+
+.homepage-works-date {
+	opacity: 0.7;
+	color: #606060;
 	font-size: 12px;
 	margin-bottom: 1em;
+    font-weight: 400;
 }
 
 .homepage-works-title {
 	opacity: 1;
-	color: var(--primary-color);
-	font-size: 16px;
+	color: #404040;
+	font-size: 18px;
 	margin-bottom: 1em;
 	font-weight: 700;
 }
@@ -81,7 +85,7 @@
 .homepage-works-description {
 	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.5;
 }
 
@@ -102,4 +106,3 @@
 		width: 100%;
 	}
 }
-

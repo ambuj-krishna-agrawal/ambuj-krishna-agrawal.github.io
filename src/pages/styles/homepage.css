@@ -55,7 +55,7 @@
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
 .homepage-social-icon {
@@ -86,25 +86,37 @@
 	margin-left: -30px;
 }
 
+.homepage-education {
+	flex-basis: 900px;
+}
+
 .homepage-article {
 	padding-bottom: 5px;
 }
 
 .homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
+	flex-basis: 900px;
 }
 
-.education-header {
+.education-header{
     color: #003366;
     font-size: 20px; /* Change the font size as per your design */
-	margin-top: 50px;
     margin-bottom: 20px; /* Change the margin as per your design */
     text-align: left; /* Change the alignment as per your design */
 	font-family: var(--primary-font);
 }
 
+.work-header{
+    color: #003366;
+    font-size: 20px; /* Change the font size as per your design */
+    margin-bottom: 20px; /* Change the margin as per your design */
+    text-align: left; /* Change the alignment as per your design */
+	font-family: var(--primary-font);
+}
+
+
 @media (max-width: 1024px) {
+
 	.homepage-first-area {
 		flex-direction: column;
 	}
@@ -161,14 +173,5 @@
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;
-	}
-
-	.education-header {
-		color: #333; /* Change the color as per your design */
-		font-size: 12px; 
-		margin-top: 20 px;/* Change the font size as per your design */
-		margin-bottom: 10px; /* Change the margin as per your design */
-		text-align: center; /* Change the alignment as per your design */
-		font-family: var(--primary-font);
 	}
 }
