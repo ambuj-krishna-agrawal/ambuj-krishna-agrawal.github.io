@@ -5,6 +5,7 @@ function work_1() {
 		date: "20 Feb 2023 - Present",
 		title: "CRED",
         position: "Senior Backend Engineer",
+        logo: "cred_1.svg",
 		description:
 			"Working on the bill payments platform powering services like credit card payments, gift cards, vouchers, electricity, education, rent etc., serving 5 million+ montly transacting users",
         internship_date: "8 Feb 2021 - 30 June 2021",
@@ -24,6 +25,7 @@ function work_2() {
 		date: "5 July 2023 - 17 Feb 2023",
 		title: "LinkedIn",
         position: "Software Development Engineer",
+        logo: "linkedin.png",
 		description:
         "Worked on Account Protection Team whose objective is safeguarding members' privacy and data from different attack vectors like scraping, phishing, replay, Man in the Middle attacks, etc. The team also handles user login experience, maintains session and members' sensitive information. ",
         internship_date: "1 May 2020 - 15 July 2020",
@@ -42,6 +44,7 @@ function work_3() {
 	return {
 		date: "October 2020 – Jan 2021",
 		title: "Elucidata",
+        logo: "elucidata.jpeg",
         position: "Fullstack Internship",
 		description:
         "Worked in close collaboration with the Pfizer team as a client to develop different automated workflows needed for vaccine generation by the researchers at Pfizer.",

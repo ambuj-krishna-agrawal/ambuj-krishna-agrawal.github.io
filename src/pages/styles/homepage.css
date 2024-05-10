@@ -59,9 +59,18 @@
 	padding-bottom: 20px;
 }
 
+.homepage-works-logo {
+	width: 25px;
+	padding-left: 0.5em;
+}
+
+
+.homepage-works-logo img {
+	width: 100%;
+}
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
+	padding-right: 10px;
+	font-size: 22px;
 	transition: color 0.2s ease-in-out;
 	color: var(--secondary-color);
 }

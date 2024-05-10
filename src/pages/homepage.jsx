@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faMailBulk, faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
@@ -175,7 +175,10 @@ const Homepage = () => {
 
 						<div className="homepage-after-title">
 							<div className="homepage-education">
-							<h2 className="education-header">Education</h2>
+							<h2 className="education-header">Education   <FontAwesomeIcon
+									icon={faGraduationCap}
+									className="homepage-social-icon"
+								/></h2>
 								{myEducation.map((education, index) => (
 									<div
 										className="homepage-education"
@@ -196,7 +199,10 @@ const Homepage = () => {
 							</div>
 
 							<div className="homepage-work">
-							<h2 className="work-header">Work Experience</h2>
+							<h2 className="work-header">Work Experience   <FontAwesomeIcon
+									icon={faBriefcase}
+									className="homepage-social-icon"
+								/></h2>
 								{myWork.map((work, index) => (
 									<div
 										className="homepage-work"
@@ -210,6 +216,7 @@ const Homepage = () => {
 											internshipDescription={work().internship_description}
 											internshipDate={work().internship_date}
 											position={work().position}
+											logo={work().logo}
 										/>
 									</div>
 								))}

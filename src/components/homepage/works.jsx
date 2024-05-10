@@ -47,7 +47,7 @@ import "./styles/works.css";
 
 
 const Works = (props) => {
-	const { title, description, date, internshipDescription, internshipDate, position } = props;
+	const { title, description, date, internshipDescription, internshipDate, position, logo } = props;
 
 	return (
 		<React.Fragment>
@@ -56,7 +56,9 @@ const Works = (props) => {
 					<div className="homepage-works-date">
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
-					<div className="homepage-works-title">{title}</div>
+					<div className="homepage-works-title">{title} <div className="homepage-works-logo">
+							<img src={logo} alt="logo" />
+						</div></div>
 					<div className="homepage-works-position">{position}</div>
 					<div className="homepage-works-description">
 						{description}
