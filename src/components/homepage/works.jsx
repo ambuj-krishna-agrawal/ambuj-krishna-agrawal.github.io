@@ -47,7 +47,7 @@ import "./styles/works.css";
 
 
 const Works = (props) => {
-	const { title, description, date } = props;
+	const { title, description, date, internshipDescription, internshipDate, position } = props;
 
 	return (
 		<React.Fragment>
@@ -57,9 +57,21 @@ const Works = (props) => {
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
 					<div className="homepage-works-title">{title}</div>
+					<div className="homepage-works-position">{position}</div>
 					<div className="homepage-works-description">
 						{description}
-					</div>
+					</div> 
+					{internshipDescription && 
+						<div className="homepage-works-internship">
+						<b>Internship:</b>
+						<div className="homepage-works-internship-date">
+							{internshipDate}
+						</div>
+						<div className="homepage-works-internship-description">
+							{internshipDescription}
+						</div>
+					</div>}
+					
 				</div>
 			</div>
 		</React.Fragment>

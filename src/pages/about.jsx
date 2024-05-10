@@ -14,9 +14,28 @@ import "./styles/about.css";
 const About = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		const titleElement = document.getElementById('newID');
+	const titleText = INFO.about.title;
+	let index = 0;
+	let typingTimeout;
+
+	function typeTitle() {
+		if (index < titleText.length) {
+			titleElement.innerHTML += titleText.charAt(index);
+			index++;
+			typingTimeout = setTimeout(typeTitle, 45); // Adjust typing speed as needed
+		}
+	}
+	titleElement.innerHTML = "";
+	typeTitle();
+	return () => {
+        clearTimeout(typingTimeout);
+    };
 	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "about");
+
+	
 
 	return (
 		<React.Fragment>
@@ -41,8 +60,7 @@ const About = () => {
 					<div className="about-container">
 						<div className="about-main">
 							<div className="about-right-side">
-								<div className="title about-title">
-									{INFO.about.title}
+								<div id="newID" className="title about-title">
 								</div>
 
 								<div className="subtitle about-subtitle">

@@ -60,6 +60,19 @@
 
 .project-description {
 	color: var(--secondary-color);
+	margin-bottom: 1em;
+}
+
+.project-feature {
+	color: var(--secondary-color);
+}
+
+.project-association {
+	color: var(--secondary-color);
+	font-size: 13px;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	font-weight: 400;
 }
 
 .project-link {
@@ -67,7 +80,7 @@
 	align-items: center;
 	color: var(--secondary-color);
 	font-size: 12px;
-	padding-top: 20px;
+	padding-top: 0.5em;
 }
 
 .project-link-icon {

@@ -57,13 +57,10 @@
 	transition: background-color 0.3s ease-in-out;
 }
 
-.homepage-works-content {
-	padding: 30px;
-}
 
 .homepage-works-date:hover {
 	opacity: 1;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .homepage-works-date {
@@ -82,11 +79,42 @@
 	font-weight: 700;
 }
 
+.homepage-works-position {
+	opacity: 1;
+	color: #404040;
+	font-size: 14px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
 .homepage-works-description {
 	opacity: 1;
 	color: var(--secondary-color);
 	font-size: 14px;
 	line-height: 1.5;
+}
+
+.homepage-works-internship {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 14px;
+	line-height: 1.5;
+	padding-top: 1em;
+	padding-bottom: 3em;
+}
+
+.homepage-works-internship-date {
+	opacity: 0.7;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.homepage-works-internship-date:hover {
+	padding-bottom: 1em;
+	opacity: 1;
+	font-weight: 600;
 }
 
 .homepage-works-link {

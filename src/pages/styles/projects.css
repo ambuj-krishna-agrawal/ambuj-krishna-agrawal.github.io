@@ -18,16 +18,16 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	margin: 0;
+	margin: 20px;
 	padding-top: 120px;
 }
 
 @media (max-width: 600px) {
 	.projects-container {
-		padding-top: 60px;
+	  padding-top: 60px;
 	}
-
+  
 	.projects-project {
-		width: calc(100% / 2);
+	  width: 100%;
 	}
 }

@@ -11,6 +11,7 @@
 .article-left-side {
 	min-width: 20%;
 	max-width: 20%;
+	font-weight: 500;
 }
 
 .article-right-side {
@@ -36,29 +37,52 @@
 
 .article-title {
 	color: #000000;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 600;
 }
 
 .article-description {
 	padding-top: 10px;
-	font-size: 12px;
+	padding-bottom: 10px;
+	font-size: 14px;
 	color: var(--secondary-color);
 	font-weight: 480;
 	line-height: 25px;
 }
 
-.article-link {
+.article-metadata {
+	font-size: 12px;
+	color: var(--secondary-color);
+	font-weight: 500;
+	line-height: 25px;
+}
+
+.article-link-list {
+	display: flex;
 	padding-top: 10px;
-	font-size: 14px;
-	color: var(--link-color);
+}
+.article-link {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.article-link-icon {
+	padding-left: 10px;
+	font-size: 11px;
+}
+
+.article-link-text {
+	padding-left: 10px;
 	font-weight: 700;
+	color: var(--link-color);
 }
 
 @media (max-width: 1024px) {
 	.article-left-side {
 		min-width: 10%;
 		max-width: 10%;
+		font-weight: 500;
 	}
 
 	.article-right-side {

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
 	faGithub,
-	faStackOverflow,
+	faLinkedin,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -118,12 +118,12 @@ const Homepage = () => {
 
 						<div className="homepage-socials">
 							<a
-								href={INFO.socials.twitter}
+								href={INFO.socials.linkedin}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faTwitter}
+									icon={faLinkedin}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -138,12 +138,12 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.twitter}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faStackOverflow}
+									icon={faTwitter}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -186,6 +186,10 @@ const Homepage = () => {
 											date={education().date}
 											title={education().title}
 											description={education().description}
+											courses={education().courses}
+											gpa={education().gpa}
+											institute={education().institute}
+											onlineCoursesList={education().onlineCoursesList}
 										/>
 									</div>
 								))}
@@ -203,6 +207,9 @@ const Homepage = () => {
 											date={work().date}
 											title={work().title}
 											description={work().description}
+											internshipDescription={work().internship_description}
+											internshipDate={work().internship_date}
+											position={work().position}
 										/>
 									</div>
 								))}

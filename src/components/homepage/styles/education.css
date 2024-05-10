@@ -13,9 +13,6 @@
 	transition: background-color 0.3s ease-in-out;
 }
 
-.homepage-education-content {
-	padding: 30px;
-}
 
 .homepage-education-date:hover {
 	opacity: 1;
@@ -27,7 +24,22 @@
     text-align: left;
 	color: #606060;
 	font-size: 12px;
-	margin-bottom: 1em;
+    padding-bottom: 1em;
+    font-weight: 400;
+}
+
+.homepage-education-date_1:hover {
+	opacity: 1;
+    font-weight: 400;
+}
+
+
+.homepage-education-date_1 {
+	opacity: 0.7;
+    text-align: left;
+	color: #606060;
+	font-size: 12px;
+    padding-bottom: 0.5em;
     font-weight: 400;
 }
 
@@ -35,34 +47,107 @@
 	opacity: 1;
 	color: #404040;
 	font-size: 18px;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	font-weight: 700;
+}
+
+
+.homepage-education-course {
+	opacity: 1;
+	color: #404040;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+
+.homepage-education-institute {
+	opacity: 0.5;
+	color: var(--secondary-color);
+	font-size: 13px;
+    font-weight: 300;
+	line-height: 1.5;
+    padding-bottom: 1em;
+}
+
+.homepage-education-institute:hover {
+    opacity: 4;
+    font-weight: 600;
+}
+
+.homepage-education-gpa {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+    font-weight: 500;
+	line-height: 1.5;
+    padding-bottom: 1em;
+}
+
+.homepage-education-all-courses {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+    font-weight: 500;
+	line-height: 1.5;
+    padding-bottom: 2em;
 }
 
 .homepage-education-description {
 	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 1.5;
+    padding-bottom: 1em;
 }
 
 .homepage-education-link {
 	opacity: 1;
-	padding-top: 20px;
 	font-size: 15px;
 	font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    text-decoration: none;
 }
 
-.homepage-education-link a {
-	color: var(--link-color);
-	text-decoration: none;
+.homepage-education-course {
+	padding-bottom: 2em;
 }
 
-.homepage-vertical-bar {
-    width: 1px;
-    background-color: #000; /* Black color for the bar */
-    height: 100px; /* Adjust according to your content's height */
-    margin-right: 20px; /* Space between the bar and the text */
+.homepage-education-course {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+    font-weight: 500;
+	line-height: 1.5;
+}
+
+.homepage-education-course-name {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+    font-weight: 500;
+	line-height: 1.5;
+    padding-bottom: 0.5em;
+}
+
+.homepage-education-course-institute {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+    font-weight: 500;
+	line-height: 1.5;
+    padding-bottom: 0.5em;
+}
+
+.homepage-education-link-icon {
+	padding-right: 10px;
+	font-size: 11px;
+    text-decoration: none;
+}
+
+.certificate-text {
+    color: var(--link-color);
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {

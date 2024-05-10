@@ -2,64 +2,60 @@ import React from "react";
 
 function work_1() {
 	return {
-		date: "7 May 2022 - 7 May 2023",
+		date: "20 Feb 2023 - Present",
 		title: "CRED",
+        position: "Senior Backend Engineer",
 		description:
-			"Undergraduate degree with honors (8.82/10 GPA) in Information Technology from Indian Institute of Information Technology, Allahabad.",
+			"Working on the bill payments platform powering services like credit card payments, gift cards, vouchers, electricity, education, rent etc., serving 5 million+ montly transacting users",
+        internship_date: "8 Feb 2021 - 30 June 2021",
+        internship_description:
+        "Made a complete backend microservice from scratch for a new line of utility product on CRED for BNPL (Buy Now, Pay Later)",
 		keywords: [
-			"IIIT Allahabad",
-			"Tharindu",
-			"Tharindu N",
-			"Tharindu Nayanajith",
-		],
-		style: `
-				.article-content {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				}
-
-				.randImage {
-					align-self: center;
-					outline: 2px solid red;
-				}
-				`,
-		body: (
-			<React.Fragment>
-				<div className="article-content">
-					<div className="paragraph">Topics learnt</div>
-					<img
-						src="https://picsum.photos/200/300"
-						alt="random"
-						className="randImage"
-					/>
-				</div>
-			</React.Fragment>
-		),
+			"CRED",
+			"Ambuj",
+			"Ambuj Agrawal",
+			"Ambuj Krishna Agrawal",
+		]
 	};
 }
 
 function work_2() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
+		date: "5 July 2023 - 17 Feb 2023",
+		title: "LinkedIn",
+        position: "Software Development Engineer",
 		description:
-			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
-		style: ``,
+        "Worked on Account Protection Team whose objective is safeguarding members' privacy and data from different attack vectors like scraping, phishing, replay, Man in the Middle attacks, etc. The team also handles user login experience, maintains session and members' sensitive information. ",
+        internship_date: "1 May 2020 - 15 July 2020",
+        internship_description:
+        "Made APIs for a new architecture for storing phone numbers handling various edge cases. Came up with a clustering algorithm to generate required number of regexes for phone number validation to replace google’s libphonenumber.",
 		keywords: [
-			"Artificial Intelligence in Healthcare",
-			"Tharindu",
-			"Tharindu N",
-			"Tharindu Nayanajith",
-		],
-		body: (
-			<React.Fragment>
-				<h1>Content of article 2</h1>
-			</React.Fragment>
-		),
+			"LinkedIn",
+			"Ambuj",
+			"Ambuj Agrawal",
+			"Ambuj Krishna Agrawal",
+		]
 	};
 }
 
-const myWork = [work_1, work_2];
+function work_3() {
+	return {
+		date: "October 2020 – Jan 2021",
+		title: "Elucidata",
+        position: "Fullstack Internship",
+		description:
+        "Worked in close collaboration with the Pfizer team as a client to develop different automated workflows needed for vaccine generation by the researchers at Pfizer.",
+        internship_date: "",
+        internship_description: "",
+		keywords: [
+			"LinkedIn",
+			"Ambuj",
+			"Ambuj Agrawal",
+			"Ambuj Krishna Agrawal",
+		]
+	};
+}
+
+const myWork = [work_1, work_2, work_3];
 
 export default myWork;

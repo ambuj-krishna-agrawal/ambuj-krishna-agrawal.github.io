@@ -29,9 +29,19 @@
 	flex-basis: 900px;
 }
 
-.about-title {
-	width: 100% !important;
-}
+
+.title .about-title {
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: .15em solid orange; /* Typing cursor */
+	width: 0 !important; /* Add !important to ensure this rule is not overridden */
+	animation: typing 3s steps(40, end); /* Adjust animation duration as needed */
+  }
+  
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
 
 .about-subtitle {
 	width: 80% !important;
