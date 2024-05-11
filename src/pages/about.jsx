@@ -23,7 +23,7 @@ const About = () => {
 		if (index < titleText.length) {
 			titleElement.innerHTML += titleText.charAt(index);
 			index++;
-			typingTimeout = setTimeout(typeTitle, 45); // Adjust typing speed as needed
+			typingTimeout = setTimeout(typeTitle, 75); // Adjust typing speed as needed
 		}
 	}
 	titleElement.innerHTML = "";
