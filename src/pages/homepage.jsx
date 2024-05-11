@@ -215,7 +215,7 @@ const Homepage = () => {
 							</div>
 
 							<div className="homepage-work">
-							<h2 className="work-header">Work Experience   <FontAwesomeIcon
+							<h2 className="work-header">Work Experience <FontAwesomeIcon
 									icon={faBriefcase}
 									className="homepage-social-icon"
 								/></h2>

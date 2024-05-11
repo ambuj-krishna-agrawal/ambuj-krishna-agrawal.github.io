@@ -70,6 +70,7 @@
 }
 .homepage-social-icon {
 	padding-right: 10px;
+	padding-left: 5px;
 	font-size: 22px;
 	transition: color 0.2s ease-in-out;
 	color: var(--secondary-color);
@@ -122,8 +123,9 @@
     margin-bottom: 20px; /* Change the margin as per your design */
     text-align: left; /* Change the alignment as per your design */
 	font-family: var(--primary-font);
+	display: flex;
+	align-items: center;
 }
-
 
 .resume-download {
     text-align: left; /* Centers the text and buttons */

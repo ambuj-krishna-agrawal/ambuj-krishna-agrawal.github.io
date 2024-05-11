@@ -46,9 +46,8 @@ const Projects = () => {
 						Below is a compilation of significant projects I've undertaken, spanning both professional endeavors within the industry and personal pursuits.
 						</div>
 
-						<div className="projects-list">
-							<AllProjects />
-						</div>
+						
+						<AllProjects />
 					</div>
 					<div className="page-footer">
 						<Footer />

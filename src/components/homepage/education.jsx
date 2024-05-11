@@ -45,12 +45,12 @@ const Education = (props) => {
                 
                 {course.certificate && (
                     
-                    <Link to={course.certificate} target="_blank" rel="noopener noreferrer">
+                    <a href={course.certificate} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                         <div className="homepage-education-link">
                         <FontAwesomeIcon className="homepage-education-link-icon" icon={faLink} /> 
                         <div className="certificate-text">Certificate</div>
                         </div>
-                    </Link>
+                    </a>
                 )}
                 </div>
             ))}

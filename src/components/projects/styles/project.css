@@ -4,7 +4,10 @@
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
-	height: 100%;
+	width: calc(100% / 2);
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
 }
 
 .project a {
@@ -95,6 +98,6 @@
 
 @media (max-width: 600px) {
 	.project {
-		height: 300px;
+		width: 100%;
 	}
 }
