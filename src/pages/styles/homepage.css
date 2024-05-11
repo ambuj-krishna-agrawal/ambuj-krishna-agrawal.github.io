@@ -125,6 +125,36 @@
 }
 
 
+.resume-download {
+    text-align: left; /* Centers the text and buttons */
+    margin-top: 20px; /* Adds some space above the section */
+    font-family: var(--primary-font);
+	font-size: 12px;
+}
+.resume-download p {
+    font-size: 1.2em; /* Makes the text slightly larger */
+    margin-bottom: 12px; /* Adds space between the text and the buttons */
+}
+.download-button, .view-resume {
+    background-color: #004aad; /* A nice blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 3px; /* Rounded corners */
+    font-size: 1em;
+	line-height: 1.5em;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.download-button:hover, .view-resume:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+.view-resume {
+    display: inline-block; /* Aligns buttons next to each other */
+}
+
+
 @media (max-width: 1024px) {
 
 	.homepage-first-area {

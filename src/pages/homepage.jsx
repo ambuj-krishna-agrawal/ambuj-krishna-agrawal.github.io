@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk, faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faMailBulk, faBriefcase, faGraduationCap, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
@@ -101,7 +101,23 @@ const Homepage = () => {
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
 								</div>
+								{/* <div className="resume-download">
+									<p><div>Want to hire me?</div> <a href="_AMBUJ_AGRAWAL.pdf" download>Download my resume!</a> or view <span className="view-resume" onClick={() => window.open("https://drive.google.com/drive/folders/your_folder_id", "_blank")}>&#128065;</span></p>
+								</div> */}
+								<div className="resume-download">
+								<p>Want to hire me?</p>
+								<div>
+									<a href="_AMBUJ_AGRAWAL.pdf" download className="download-button">
+										Download my resume!
+									</a>
+									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1eZFWuLJqY55Od1CUBke0xkepyAysWUqp/view?usp=sharing", "_blank")}>
+									<FontAwesomeIcon icon={faEye} /> View
+									</button>
+								</div>
 							</div>
+
+								</div>
+
 
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
