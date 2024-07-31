@@ -76,6 +76,13 @@
 	color: var(--secondary-color);
 }
 
+.homepage-social-icon-img {
+    width: 25px; 
+    height: 25px;
+	margin-right: 0.7em;
+    /* transform: translateX(-0.1em); */
+}
+
 .homepage-social-icon:hover {
 	color: var(--primary-color);
 }

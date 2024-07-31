@@ -12,7 +12,15 @@
 
 .social-icon {
 	font-size: 15px;
+	align-items: center;
 	color: var(--secondary-color);
+}
+
+.social-icon-img {
+    width: 20px; 
+    height: 20px;
+	margin-right: 2em; 
+    transform: translateX(-0.1em);
 }
 
 .social-text {

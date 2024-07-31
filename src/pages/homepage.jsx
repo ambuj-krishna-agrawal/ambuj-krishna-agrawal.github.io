@@ -110,7 +110,7 @@ const Homepage = () => {
 									<a href="_AMBUJ_AGRAWAL.pdf" download className="download-button">
 										Download my resume!
 									</a>
-									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1eZFWuLJqY55Od1CUBke0xkepyAysWUqp/view?usp=sharing", "_blank")}>
+									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/19GP2Zt39Qy4T-oH1C4-XS5iSdfqpx3T1/view?usp=sharing", "_blank")}>
 									<FontAwesomeIcon icon={faEye} /> View
 									</button>
 								</div>
@@ -133,6 +133,15 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-socials">
+							<a
+								href={INFO.socials.topmate}
+								target="_blank"
+								rel="noreferrer"
+							>
+							<div className="homepage-social-icon-img">
+                    			<img src="/topmate.png" alt="Topmate" className="homepage-social-icon-img" />
+							</div>
+							</a>
 							<a
 								href={INFO.socials.linkedin}
 								target="_blank"

@@ -10,6 +10,12 @@ function education_3() {
         courses: [],
         onlineCoursesList: [
             {
+                "name": "Sequence Models",
+                "institute": "DeepLearning.AI",
+                "date": "14 May 2024",
+                "certificate": "https://www.coursera.org/account/accomplishments/verify/D6FEKSAJS8D9",
+            },
+            {
                 "name": "Convolutional Neural Network",
                 "institute": "DeepLearning.AI",
                 "date": "12 March 2019",

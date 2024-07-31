@@ -17,6 +17,22 @@ const Socials = () => {
 		<div className="socials">
 			<div className="social">
 				<a
+					href={INFO.socials.topmate}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div className="social-icon-img">
+                    		<img src="/topmate.png" alt="Topmate" className="social-icon-img" />
+						{/* <FontAwesomeIcon
+							icon={faLinkedin}
+							className="social-icon"
+						/> */}
+					</div>
+					<div className="social-text">Connect on TopMate</div>
+				</a>
+			</div>
+			<div className="social">
+				<a
 					href={INFO.socials.linkedin}
 					target="_blank"
 					rel="noreferrer"
