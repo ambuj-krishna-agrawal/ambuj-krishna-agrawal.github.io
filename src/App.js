@@ -15,36 +15,6 @@ function App() {
         if (TRACKING_ID !== "") {
             ReactGA.initialize(TRACKING_ID);
         }
-        // Add the Topmate script
-        const script = document.createElement("script");
-        script.src = "https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js";
-        script.async = true;
-        script.defer = true;
-        script.setAttribute("user-profile", "https://topmate.io/embed/profile/ambuj_agrawal11?theme=D5534D");
-        script.setAttribute("btn-style", '{"backgroundColor":"#000","color":"#fff","border":"1px solid #000"}');
-        script.setAttribute("embed-version", "v1");
-        script.setAttribute("button-text", "Let's Connect");
-        script.setAttribute("position-right", "30px");
-        script.setAttribute("position-bottom", "30px");
-        script.setAttribute("custom-padding", "0px");
-        script.setAttribute("custom-font-size", "16px");
-        script.setAttribute("custom-font-weight", "500");
-        script.setAttribute("custom-width", "200px");
-
-        script.onload = () => {
-            console.log("Topmate script loaded successfully.");
-        };
-
-        script.onerror = () => {
-            console.error("Failed to load Topmate script.");
-        };
-
-        document.body.appendChild(script);
-
-        // Cleanup script on unmount
-        return () => {
-            document.body.removeChild(script);
-        };
     }, []);
     return ( 
         <div className="App">

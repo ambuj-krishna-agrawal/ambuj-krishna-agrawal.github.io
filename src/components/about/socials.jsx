@@ -23,10 +23,6 @@ const Socials = () => {
 				>
 					<div className="social-icon-img">
                     		<img src="/topmate.png" alt="Topmate" className="social-icon-img" />
-						{/* <FontAwesomeIcon
-							icon={faLinkedin}
-							className="social-icon"
-						/> */}
 					</div>
 					<div className="social-text">Connect on TopMate</div>
 				</a>
