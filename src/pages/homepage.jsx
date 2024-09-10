@@ -110,7 +110,7 @@ const Homepage = () => {
 									<a href="_AMBUJ_AGRAWAL.pdf" download className="download-button">
 										Download my resume!
 									</a>
-									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/19GP2Zt39Qy4T-oH1C4-XS5iSdfqpx3T1/view?usp=sharing", "_blank")}>
+									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/11q35SYoNZeo4cmapmVfTYj87YWnvUrw5/view?usp=sharing", "_blank")}>
 									<FontAwesomeIcon icon={faEye} /> View
 									</button>
 								</div>
