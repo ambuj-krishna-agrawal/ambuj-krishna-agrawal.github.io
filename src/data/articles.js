@@ -1,5 +1,55 @@
 import React from "react";
 
+
+function article_cmu_GPA() {
+	return {
+		date: "September 2024 – Present",
+		title: "Granular Preference-Based Feedback of Generated Text",
+		link: "",
+		guide: "Associate Professor Fernando Diaz, Language Technologies Institute, Carnegie Mellon University",
+		institute: "Carnegie Mellon University",
+		codelink: "https://github.com/shaily99/gpa",
+		isPublished: false,
+		description:
+		"Working as a Research Assistant under Dr. Fernando Diaz on the “Starlight” team, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
+		keywords: [
+			"Granular Preference",
+			"RLHF",
+			"Pytorch",
+			"Inference",
+			"LLM",
+			"Ambuj",
+			"Ambuj Krishna Agrawal",
+			"Ambuj Agrawal",
+		]
+	};
+}
+
+
+function article_cmu_rag() {
+	return {
+		date: "October 2024 – October 2024",
+		title: "RAG-Chatbot",
+		link: "",
+		guide: "",
+		institute: "Carnegie Mellon University",
+		codelink: "",
+		isPublished: false,
+		description:
+		"In a team of three, developed a RAG pipeline using concepts like multi-query, cross encoders, lost in the middle, BM25, and vector embedding with Langchain and scraped over 5000 documents using selenium to answer the latest questions about Pittsburgh.",
+		keywords: [
+			"RAG",
+			"Retrieval Augmented Generation",
+			"Langchain",
+			"Dense Retrieval",
+			"BM25",
+			"Ambuj",
+			"Ambuj Krishna Agrawal",
+			"Ambuj Agrawal",
+		]
+	};
+}
+
 function article_1() {
 	return {
 		date: "Jan 2020 – July 2020",
@@ -87,6 +137,6 @@ function article_4() {
 	};
 }
 
-const myArticles = [article_1, article_2, article_3, article_4];
+const myArticles = [article_cmu_GPA, article_cmu_rag, article_1, article_2, article_3, article_4];
 
 export default myArticles;

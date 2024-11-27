@@ -19,7 +19,7 @@ const INFO = {
 	homepage: {
 		title: "Machine Learning Researcher and Backend Developer",
 		description:
-			"I am a backend developer with 3 years of industry experience with microservices and building scalable consumer products. I also work in the domain of machine learning primarily Natural Language Processing (NLP) and aim to ultimately work in the intersection of healthcare, AI and Software Development.",
+		"I am a Machine Learning Researcher specializing in the field of Natural Language Processing, currently working on Evaluation of LLMs on Human Preference Feedback, RAG, Routers in LLM and Multimodal Web Agents. I have 3 years of industry experience with microservices and building scalable consumer products. I am actively looking for Machine Learning Internships for Summer 2025.",
 	},
 
 	about: {

@@ -86,14 +86,16 @@ function education_1() {
 
 function education_2() {
 	return {
-		date: "Starting: August 2024",
+		date: "August 2024 - December 2025",
 		title: "Masters",
 		description:
 			"Masters in Intelligent Information Systems (MIIS)",
         gpa: "",
-        institute: "Language Technologies Institute, School of Computer Science, Carnegie Mellon University (CMU)",
+        institute: "Carnegie Mellon University (CMU), Language Technologies Institute, School of Computer Science",
         courses: [
-            "Advance NLP",
+            "Advance Natural Language Processing",
+            "Multimodal Machine Learning",
+            "Introduction to Machine Learning"
         ],
         onlineCoursesList: [],
 		keywords: [

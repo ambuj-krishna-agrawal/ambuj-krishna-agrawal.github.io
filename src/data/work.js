@@ -1,8 +1,31 @@
 import React from "react";
 
+
+function work_cmu() {
+	return {
+		date: "5 September 2024 - Present",
+		title: "Carnegie Mellon University",
+        position: "Machine Learning Reseacher",
+        logo: "cmu.svg",
+		description:
+			"Working as a Research Assistant under Dr. Fernando Diaz on the “Starlight” team, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
+        internship_date: "",
+        internship_description:
+        "",
+		keywords: [
+			"Machine Learning",
+			"Natural Language Processing",
+			"Artificial Intelligence",
+			"Ambuj",
+			"Ambuj Agrawal",
+			"Ambuj Krishna Agrawal",
+		]
+	};
+}
+
 function work_1() {
 	return {
-		date: "20 Feb 2023 - Present",
+		date: "20 Feb 2023 - 17th July 2024",
 		title: "CRED",
         position: "Senior Backend Engineer",
         logo: "cred_1.svg",
@@ -59,6 +82,6 @@ function work_3() {
 	};
 }
 
-const myWork = [work_1, work_2, work_3];
+const myWork = [work_cmu, work_1, work_2, work_3];
 
 export default myWork;
