@@ -99,7 +99,6 @@ const Homepage = () => {
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									{console.log(INFO.homepage.description)}
 								<span
 									dangerouslySetInnerHTML={{ __html: INFO.homepage.description }}
 								></span>
