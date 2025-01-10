@@ -9,6 +9,7 @@ import {
 	faLinkedin,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import resume from '../assets/_AMBUJ_AGRAWAL.pdf';
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -106,7 +107,7 @@ const Homepage = () => {
 								<div className="resume-download">
 								<p>Want to hire me?</p>
 								<div>
-								<a href="/_AMBUJ_AGRAWAL.pdf" download className="download-button">
+								<a href={resume} download className="download-button">
 									Download my resume!
 								</a>
 									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
