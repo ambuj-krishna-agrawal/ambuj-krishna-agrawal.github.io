@@ -1,8 +1,11 @@
 const SEO = [
 	{
 		page: "home",
-		description:
-			"I am a Machine Learning Researcher specializing in the field of Natural Language Processing, currently working on Evaluating LLMs on Human Preference Feedback, RAG, Routers in LLM and Multimodal Web Agents. I have 3 years of industry experience with microservices and building scalable consumer products. I am actively looking for Machine Learning Internships for Summer 2025.",
+		description: `
+			I am a Machine Learning Researcher specializing in the field of Natural Language Processing, currently working on Evaluation of LLMs on Human Preference Feedback, RAG, Routers in LLM and Multimodal Web Agents. 
+			I have 3 years of industry experience with microservices and building scalable consumer products. 
+			<span style="color: red;">I am actively looking for Machine Learning Internships for Summer 2025.</span>
+		`,
 			keywords: ["Ambuj", "Ambuj Agrawal", "Ambuj Krishna Agrawal"],
 	},
 

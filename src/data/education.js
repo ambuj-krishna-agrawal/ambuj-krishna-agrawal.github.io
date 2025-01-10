@@ -90,7 +90,7 @@ function education_2() {
 		title: "Masters",
 		description:
 			"Masters in Intelligent Information Systems (MIIS)",
-        gpa: "",
+        gpa: "4/4",
         institute: "Carnegie Mellon University (CMU), Language Technologies Institute, School of Computer Science",
         courses: [
             "Advance Natural Language Processing",

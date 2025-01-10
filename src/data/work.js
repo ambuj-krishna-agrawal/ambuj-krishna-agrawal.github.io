@@ -8,7 +8,7 @@ function work_cmu() {
         position: "Machine Learning Reseacher",
         logo: "cmu.svg",
 		description:
-			"Working as a Research Assistant under Dr. Fernando Diaz on the “Starlight” team, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
+		"Working as a Research Assistant under Dr. Fernando Diaz, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
         internship_date: "",
         internship_description:
         "",
@@ -30,7 +30,7 @@ function work_1() {
         position: "Senior Backend Engineer",
         logo: "cred_1.svg",
 		description:
-			"Working on the bill payments platform powering services like credit card payments, gift cards, vouchers, electricity, education, rent etc., serving 5 million+ montly transacting users",
+			"Worked on the bill payments platform powering services like credit card payments, gift cards, vouchers, electricity, education, rent etc., serving 5 million+ montly transacting users",
         internship_date: "8 Feb 2021 - 30 June 2021",
         internship_description:
         "Made a complete backend microservice from scratch for a new line of utility product on CRED for BNPL (Buy Now, Pay Later)",

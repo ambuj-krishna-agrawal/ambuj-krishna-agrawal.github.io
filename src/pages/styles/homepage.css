@@ -163,6 +163,10 @@
     display: inline-block; /* Aligns buttons next to each other */
 }
 
+.highlight-red {
+    color: red;
+}
+
 
 @media (max-width: 1024px) {
 
@@ -222,3 +226,4 @@
 		flex-basis: auto;
 	}
 }
+

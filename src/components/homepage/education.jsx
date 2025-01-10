@@ -19,7 +19,12 @@ const Education = (props) => {
 					</div>}
 					<div className="homepage-education-title">{title}</div>
                     {institute && <div className="homepage-education-institute"><b>{institute}</b></div>}
-                    {description && <div className="homepage-education-description" dangerouslySetInnerHTML={{ __html: description }}></div>}
+                    {description && (
+                        <div
+                            className="homepage-education-description"
+                            dangerouslySetInnerHTML={{ __html: description }}
+                        ></div>
+                    )}
                     {gpa && <div className="homepage-education-gpa">Grade: <b>{gpa}</b></div>}
                     {courses.length > 0 && (
                 <div className="homepage-education-all-courses">

@@ -11,10 +11,61 @@ function article_cmu_GPA() {
 		codelink: "https://github.com/shaily99/gpa",
 		isPublished: false,
 		description:
-		"Working as a Research Assistant under Dr. Fernando Diaz on the “Starlight” team, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
+		"Working as a Research Assistant under Dr. Fernando Diaz, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
 		keywords: [
 			"Granular Preference",
+			"Preference Data",
 			"RLHF",
+			"Pytorch",
+			"Inference",
+			"LLM",
+			"Ambuj",
+			"Ambuj Krishna Agrawal",
+			"Ambuj Agrawal",
+		]
+	};
+}
+
+function routers_cmu_anlp() {
+	return {
+		date: "October 2024 – December 2024",
+		title: "Routers In LLMs",
+		link: "",
+		guide: "",
+		institute: "Carnegie Mellon University",
+		codelink: "",
+		isPublished: false,
+		description:
+		"Developed a novel method to obtain synthetic preference data between open-source models with scarce existing preference data. Built routers by fine-tuning Llama models and matrix factorization using the new data to enhance routing, tested on GSM8K.",
+		keywords: [
+			"Routers",
+			"Preference Data",
+			"Synthetic Data Generation",
+			"Pytorch",
+			"Inference",
+			"LLM",
+			"Ambuj",
+			"Ambuj Krishna Agrawal",
+			"Ambuj Agrawal",
+		]
+	};
+}
+
+function web_agents_cmu_anlp() {
+	return {
+		date: "September 2024 – December 2024",
+		title: "Multimodal Web Agents",
+		link: "",
+		guide: "",
+		institute: "Carnegie Mellon University",
+		codelink: "",
+		isPublished: false,
+		description:
+		"Developed an ensemble of verifier agents using a tree search algorithm to address web agents' inefficiencies by pruning unnecessary paths, improving resource efficiency and accuracy. Benchmarked on the VisualWebArena dataset, enhancing the best-performing paper.",
+		keywords: [
+			"Multimodal Web Agents",
+			"Computer Vision",
+			"Agents",
 			"Pytorch",
 			"Inference",
 			"LLM",
@@ -137,6 +188,6 @@ function article_4() {
 	};
 }
 
-const myArticles = [article_cmu_GPA, article_cmu_rag, article_1, article_2, article_3, article_4];
+const myArticles = [article_cmu_GPA, routers_cmu_anlp, web_agents_cmu_anlp, article_cmu_rag, article_1, article_2, article_3, article_4];
 
 export default myArticles;

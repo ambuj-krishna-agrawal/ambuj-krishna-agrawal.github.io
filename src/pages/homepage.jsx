@@ -99,15 +99,15 @@ const Homepage = () => {
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
+									{console.log(INFO.homepage.description)}
+								<span
+									dangerouslySetInnerHTML={{ __html: INFO.homepage.description }}
+								></span>
 								</div>
-								{/* <div className="resume-download">
-									<p><div>Want to hire me?</div> <a href="_AMBUJ_AGRAWAL.pdf" download>Download my resume!</a> or view <span className="view-resume" onClick={() => window.open("https://drive.google.com/drive/folders/your_folder_id", "_blank")}>&#128065;</span></p>
-								</div> */}
 								<div className="resume-download">
 								<p>Want to hire me?</p>
 								<div>
-									<a href={`${process.env.PUBLIC_URL}/_AMBUJ_AGRAWAL.pdf`} download className="download-button">
+									<a href={`_AMBUJ_AGRAWAL.pdf`} download className="download-button">
 										Download my resume!
 									</a>
 									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
