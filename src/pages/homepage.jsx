@@ -106,9 +106,9 @@ const Homepage = () => {
 								<div className="resume-download">
 								<p>Want to hire me?</p>
 								<div>
-									<a href={`/_AMBUJ_AGRAWAL.pdf`} download className="download-button">
-										Download my resume!
-									</a>
+								<a href="/_AMBUJ_AGRAWAL.pdf" download className="download-button">
+									Download my resume!
+								</a>
 									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
 									<FontAwesomeIcon icon={faEye} /> View
 									</button>
