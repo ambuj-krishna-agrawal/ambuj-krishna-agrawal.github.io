@@ -105,11 +105,11 @@ const Homepage = () => {
 								></span>
 								</div>
 								<div className="resume-download">
-								<p>Want to hire me?</p>
+									<p>Want to hire me?</p>
 								<div>
-								<a href={resume} download className="download-button">
+								{/* <a href={resume} download className="download-button">
 									Download my resume!
-								</a>
+								</a> */}
 									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
 									<FontAwesomeIcon icon={faEye} /> View
 									</button>
