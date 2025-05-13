@@ -86,13 +86,16 @@ function education_1() {
 
 function education_2() {
 	return {
-		date: "August 2024 - December 2025",
+		date: "August 2024 - Present",
 		title: "Masters",
 		description:
 			"Masters in Intelligent Information Systems (MIIS)",
-        gpa: "4/4",
+        gpa: "3.92/4",
         institute: "Carnegie Mellon University (CMU), Language Technologies Institute, School of Computer Science",
         courses: [
+            "Conversational AI",
+            "AI Venture Studios",
+            "Search Engines And Recommender Systems",
             "Advance Natural Language Processing",
             "Multimodal Machine Learning",
             "Introduction to Machine Learning"

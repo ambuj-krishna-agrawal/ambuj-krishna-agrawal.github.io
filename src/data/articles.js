@@ -26,6 +26,34 @@ function article_cmu_GPA() {
 	};
 }
 
+
+
+function article_cmu_emo_tts() {
+	return {
+		date: "February 2025 – April 2025",
+		title: "Emotional Speech Generation",
+		link: "https://drive.google.com/file/d/1EbLpg317E5ahHUPr4-NKJEHsrxVzZJv2/view?usp=sharing",
+		guide: "Shinji Wanatabe, Language Technologies Institute, Carnegie Mellon University",
+		institute: "Carnegie Mellon University",
+		codelink: "https://github.com/ambuj-krishna-agrawal/emo-tts",
+		isPublished: false,
+		description:
+			"Developed a cascaded TTS pipeline that uses few‑shot LLM prompting and the EmotiVoice model to produce speech with controllable emotional intensity. Designed objective metrics to quantify emotional expressiveness and benchmarked performance against Tacotron 2 and VITS, demonstrating improved similarity and naturalness.",
+		keywords: [
+			"Emotional Speech Generation",
+			"Text-to-Speech",
+			"Emotional Expressiveness",
+			"Evaluation Metrics",
+			"Cascaded TTS Pipeline",
+			"EmotiVoice",
+			"Tacotron 2",
+			"VITS",
+			"Ambuj Krishna Agrawal"
+		]
+	};
+}
+
+
 function routers_cmu_anlp() {
 	return {
 		date: "October 2024 – December 2024",
@@ -110,7 +138,7 @@ function article_1() {
 		institute: "Indian Institute of Information Technology, Allahabad",
 		codelink: "https://github.com/drv-agwl/Hybrid-SPTAM",
 		isPublished: true,
-		description:
+		description:	
 			"Improved localization accuracy of V-SLAM by injecting semantic information of detected corner points (using L-CNN). Detected object in a scene were used for place recognition and correspondence matching which further enhanced the semantic information provided to V-SLAM module.",
 		keywords: [
 			"V-SLAM",
@@ -188,6 +216,6 @@ function article_4() {
 	};
 }
 
-const myArticles = [article_cmu_GPA, routers_cmu_anlp, web_agents_cmu_anlp, article_cmu_rag, article_1, article_2, article_3, article_4];
+const myArticles = [article_cmu_GPA, article_cmu_emo_tts, routers_cmu_anlp, web_agents_cmu_anlp, article_cmu_rag, article_1, article_2, article_3, article_4];
 
 export default myArticles;

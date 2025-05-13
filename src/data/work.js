@@ -82,6 +82,24 @@ function work_3() {
 	};
 }
 
-const myWork = [work_cmu, work_1, work_2, work_3];
+function work_4() {
+	return {
+		date: "May 2025 – Aug 2025",
+		title: "Netflix",
+        logo: "netflix.svg",
+        position: "Machine Learning Engineering Internship",
+		description: "Working in Localization Team on Diffusion Based TTS Systems",
+        internship_date: "",
+        internship_description: "",
+		keywords: [
+			"LinkedIn",
+			"Ambuj",
+			"Ambuj Agrawal",
+			"Ambuj Krishna Agrawal",
+		]
+	};
+}
+
+const myWork = [work_4, work_cmu, work_1, work_2, work_3];
 
 export default myWork;

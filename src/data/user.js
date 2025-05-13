@@ -20,9 +20,7 @@ const INFO = {
 		title: "Machine Learning Researcher and Backend Developer",
 		description: `
 			I am a Machine Learning Researcher specializing in the field of Natural Language Processing, currently working on Evaluation of LLMs on Human Preference Feedback, RAG, Routers in LLM and Multimodal Web Agents. 
-			I have 3 years of industry experience with microservices and building scalable consumer products. 
-			<span class="highlight-red">I am actively looking for Machine Learning/Software Development Internships for Summer 2025.</span>
-		`,
+			I have 3 years of industry experience with microservices and building scalable consumer products. 		`,
 	},
 	about: {
 		title: "Hello, I'm Ambuj",
