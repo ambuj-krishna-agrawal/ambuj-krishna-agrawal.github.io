@@ -14,89 +14,40 @@ import "./styles/socials.css";
 
 const Socials = () => {
 	return (
-		<div className="socials">
-			<div className="social">
-				<a
-					href={INFO.socials.topmate}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div className="social-icon-img">
-                    		<img src="/topmate.png" alt="Topmate" className="social-icon-img" />
-					</div>
-					<div className="social-text">Connect on TopMate</div>
-				</a>
-			</div>
-			<div className="social">
-				<a
-					href={INFO.socials.linkedin}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faLinkedin}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on LinkedIn</div>
+		<div className="socials-container">
+			<div className="social-item">
+				<a href={INFO.socials.linkedin} target="_blank" rel="noreferrer">
+					<FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+					<span className="social-text">Follow on LinkedIn</span>
 				</a>
 			</div>
 
-			<div className="social">
+			<div className="social-item">
 				<a href={INFO.socials.github} target="_blank" rel="noreferrer">
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faGithub}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on GitHub</div>
+					<FontAwesomeIcon icon={faGithub} className="social-icon" />
+					<span className="social-text">Follow on GitHub</span>
 				</a>
 			</div>
 
-			<div className="social">
+			<div className="social-item">
 				<a href={INFO.socials.twitter} target="_blank" rel="noreferrer">
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faTwitter}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on Twitter</div>
+					<FontAwesomeIcon icon={faTwitter} className="social-icon" />
+					<span className="social-text">Follow on Twitter</span>
 				</a>
 			</div>
 
-			<div className="social">
-				<a
-					href={INFO.socials.instagram}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faInstagram}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on Instagram</div>
+			<div className="social-item">
+				<a href={INFO.socials.instagram} target="_blank" rel="noreferrer">
+					<FontAwesomeIcon icon={faInstagram} className="social-icon" />
+					<span className="social-text">Follow on Instagram</span>
 				</a>
 			</div>
 
-			<div className="email">
-				<div className="email-wrapper">
-					<a
-						href={`mailto:${INFO.main.email}`}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<div className="social-icon">
-							<FontAwesomeIcon icon={faEnvelope} />
-						</div>
-
-						<div className="social-text">{INFO.main.email}</div>
-					</a>
-				</div>
+			<div className="social-item email-item">
+				<a href={`mailto:${INFO.main.email}`} target="_blank" rel="noreferrer">
+					<FontAwesomeIcon icon={faEnvelope} className="social-icon" />
+					<span className="social-text">{INFO.main.email}</span>
+				</a>
 			</div>
 		</div>
 	);

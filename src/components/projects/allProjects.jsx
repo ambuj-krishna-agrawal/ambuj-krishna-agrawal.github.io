@@ -21,6 +21,7 @@ const AllProjects = () => {
 									key={index}
 									linkViewDemoText={project.linkViewDemoText}
 									linkViewDemo={project.linkViewDemo}
+									date={project.date}
 								/>
 			))}
 		</div>

@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
 import Article from "../components/articles/article";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
+import { initScrollReveal, addElementAnimations } from "../utils/animations";
 
 import "./styles/articles.css";
 
@@ -33,30 +33,14 @@ const Articles = () => {
 			<div className="page-content">
 				<NavBar active="articles" />
 				<div className="content-wrapper">
-					<div className="articles-logo-container">
-						<div className="articles-logo">
-							<Logo width={46} />
-						</div>
-					</div>
-
-					<div className="articles-main-container">
-						<div className="title articles-title">
-							{INFO.articles.title}
-						</div>
-
-						<div className="subtitle articles-subtitle">
-							{INFO.articles.description}
-						</div>
-
-						<div className="articles-container">
-							<div className="articles-wrapper">
+					<div className="homepage-container">
+						<div className="title articles-title">{INFO.articles.title}</div>
+						<div className="subtitle articles-subtitle">{INFO.articles.description}</div>
+						<div className="all-articles-container">
+							<div className="articles-list">
 								{myArticles.map((article, index) => (
-									<div
-										className="articles-article"
-										key={(index + 1).toString()}
-									>
+									<div className="articles-article" key={index}>
 										<Article
-											key={(index + 1).toString()}
 											date={article().date}
 											title={article().title}
 											description={article().description}

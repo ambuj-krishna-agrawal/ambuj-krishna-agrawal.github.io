@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./logo";
 
 import "./styles/navBar.css";
 
@@ -11,16 +12,10 @@ const NavBar = (props) => {
 			<div className="nav-container">
 				<nav className="navbar">
 					<div className="nav-background">
+						<div className="nav-logo">
+							<Logo width={48} link={true} />
+						</div>
 						<ul className="nav-list">
-							<li
-								className={
-									active === "home"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/">Home</Link>
-							</li>
 							<li
 								className={
 									active === "articles"
@@ -28,7 +23,16 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/articles">ML Projects</Link>
+								<Link to="/articles">ML Research</Link>
+							</li>
+							<li
+								className={
+									active === "mlprojects"
+										? "nav-item active"
+										: "nav-item"
+								}
+							>
+								<Link to="/mlprojects">AI Full Stack</Link>
 							</li>
 							<li
 								className={

@@ -19,12 +19,25 @@
 	flex-direction: column;
 	height: 100%;
 	margin: 20px;
-	padding-top: 120px;
+	padding-top: 140px;
+	position: relative;
+}
+
+.projects-container::before {
+	content: '';
+	position: absolute;
+	top: 120px;
+	left: 0;
+	right: 0;
+	height: 200px;
+	background: linear-gradient(180deg, rgba(236, 228, 217, 0.5) 0%, rgba(249, 246, 242, 0) 100%);
+	z-index: -1;
+	border-radius: 0 0 50% 50% / 30px;
 }
 
 @media (max-width: 600px) {
 	.projects-container {
-	  padding-top: 60px;
+	  padding-top: 90px;
 	}
   
 	.projects-project {

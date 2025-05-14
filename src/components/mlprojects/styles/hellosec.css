@@ -1,0 +1,347 @@
+@import "../../../data/styles.css";
+
+.hellosec-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f2ed 0%, #ede9e2 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(84, 80, 72, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hellosec-container::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(154, 140, 120, 0.1) 0%, rgba(154, 140, 120, 0) 70%);
+    border-radius: 50%;
+}
+
+.hellosec-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(154, 140, 120, 0.08) 0%, rgba(154, 140, 120, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hellosec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hellosec-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hellosec-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9a8c78 0%, #7d7164 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(125, 113, 100, 0.25);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hellosec-logo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    animation: shine 5s infinite ease-in-out;
+    z-index: 1;
+}
+
+.hellosec-logo:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 12px 24px rgba(125, 113, 100, 0.35);
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    20%, 100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.hellosec-logo svg {
+    font-size: 26px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.hellosec-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #4a4741;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.hellosec-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hellosec-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    color: #7d7164;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(84, 80, 72, 0.1);
+    border: 1px solid rgba(215, 208, 195, 0.5);
+}
+
+.hellosec-link:hover {
+    transform: translateY(-3px);
+    background-color: #fff;
+    color: #4a4741;
+    box-shadow: 0 5px 15px rgba(84, 80, 72, 0.15);
+}
+
+.hellosec-tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7d7164;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hellosec-tagline::before,
+.hellosec-tagline::after {
+    content: '"';
+    font-size: 2rem;
+    color: rgba(154, 140, 120, 0.3);
+    position: absolute;
+}
+
+.hellosec-tagline::before {
+    left: 0;
+    top: -10px;
+}
+
+.hellosec-tagline::after {
+    right: 0;
+    bottom: -30px;
+}
+
+.hellosec-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(84, 80, 72, 0.15);
+    border: 4px solid white;
+}
+
+.hellosec-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.hellosec-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.hellosec-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(84, 80, 72, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.hellosec-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(84, 80, 72, 0.12);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hellosec-feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b5a99a 0%, #9a8c78 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(154, 140, 120, 0.3);
+}
+
+.hellosec-feature-icon svg {
+    font-size: 22px;
+    color: white;
+}
+
+.hellosec-feature-content {
+    flex: 1;
+}
+
+.hellosec-feature-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4a4741;
+    margin: 0 0 10px 0;
+}
+
+.hellosec-feature-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #5e5b56;
+    margin: 0;
+}
+
+.hellosec-quote {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(245,242,237,0.7) 100%);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(84, 80, 72, 0.05);
+    border-left: 4px solid #9a8c78;
+}
+
+.hellosec-quote blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #4a4741;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0 30px;
+}
+
+.hellosec-quote blockquote::before,
+.hellosec-quote blockquote::after {
+    content: '"';
+    font-size: 4rem;
+    font-family: Georgia, serif;
+    color: rgba(154, 140, 120, 0.15);
+    position: absolute;
+    line-height: 1;
+}
+
+.hellosec-quote blockquote::before {
+    left: -10px;
+    top: -20px;
+}
+
+.hellosec-quote blockquote::after {
+    right: -10px;
+    bottom: -40px;
+}
+
+@media (max-width: 1024px) {
+    .hellosec-container {
+        padding: 30px;
+    }
+    
+    .hellosec-title {
+        font-size: 2rem;
+    }
+    
+    .hellosec-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hellosec-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hellosec-container {
+        padding: 20px;
+    }
+    
+    .hellosec-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hellosec-title {
+        font-size: 1.7rem;
+    }
+    
+    .hellosec-tagline {
+        font-size: 1rem;
+        padding: 0;
+    }
+    
+    .hellosec-tagline::before,
+    .hellosec-tagline::after {
+        display: none;
+    }
+    
+    .hellosec-quote blockquote {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .hellosec-feature {
+        padding: 20px;
+    }
+    
+    .hellosec-feature-title {
+        font-size: 1.1rem;
+    }
+}

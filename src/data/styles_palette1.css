@@ -1,21 +1,21 @@
 :root {
-  /* ------- colors: Palette 3 - Warm Stone & Moss ------- */
-  --primary-color: #393734;
-  --secondary-color: #5e5b56;
-  --tertiary-color: #7f7c75;
-  --quaternary-color: #e7e5e0;
-  --quaternary-color-rgb: 231, 229, 224;
-  --link-color: #8b8778;
-  --accent-color: #8b8778;
-  --accent-color-rgb: 139, 135, 120;
-  --accent-soft: rgba(139, 135, 120, 0.08);
-  --background: #f9f6f2;
-  --background-rgb: 249, 246, 242;
-  --background-alt: #f3f0ea;
+  /* ------- colors: Palette 1 - Muted Sage & Terracotta ------- */
+  --primary-color: #2d3033;
+  --secondary-color: #4d5559;
+  --tertiary-color: #6e7c7c;
+  --quaternary-color: #e5e8e8;
+  --quaternary-color-rgb: 229, 232, 232;
+  --link-color: #8a9b6e;
+  --accent-color: #8a9b6e;
+  --accent-color-rgb: 138, 155, 110;
+  --accent-soft: rgba(138, 155, 110, 0.08);
+  --background: #faf9f7;
+  --background-rgb: 250, 249, 247;
+  --background-alt: #f3f2ee;
   --card-background: #ffffff;
-  --card-hover-bg: #f3f0ea;
+  --card-hover-bg: #f3f2ee;
   --section-background: #ffffff;
-  --subtle-border: #e6e3dc;
+  --subtle-border: #e5e4e0;
   --text-on-accent: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.08);
   --hover-shadow-color: rgba(0, 0, 0, 0.12);

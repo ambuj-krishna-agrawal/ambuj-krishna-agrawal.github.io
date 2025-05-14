@@ -1,52 +1,67 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faCode, faEye, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/project.css";
 
 const Project = (props) => {
-	const { logo, title, description, features, company, linkText, link, linkViewDemoText, linkViewDemo } = props;
+	const { logo, title, description, features, company, linkText, link, linkViewDemoText, linkViewDemo, date } = props;
 
 	return (
 		<React.Fragment>
 			<div className="project">
-				
-					<div className="project-container">
+				<div className="project-container">
+					{/* Date at the top, styled like homepage */}
+					{date && (
+						<div className="homepage-education-date" style={{ marginBottom: '12px' }}>
+							|&nbsp;&nbsp;&nbsp;{date}
+						</div>
+					)}
+					<div className="project-header">
 						<div className="project-logo">
 							<img src={logo} alt="logo" />
 						</div>
-						<div className="project-title">{title}</div>
-						<div className="project-description">{description}</div>
-						{features && features.map((feature, index) => (
-							<div key={index} className="project-feature">
-								&#8226; {feature} {/* Bullet mark and feature */}
-							</div>
-						))}
-						{company && (<div className="project-association">Associated With: <b>{company}</b></div>)}
+						<div className="project-title-wrapper">
+							<div className="project-title">{title}</div>
+							{company && (
+								<div className="project-company">{company}</div>
+							)}
+						</div>
+					</div>
+					
+					<div className="project-description">{description}</div>
+					
+					{features && features.length > 0 && (
+						<div className="project-features-list">
+							{features.map((feature, index) => (
+								<div key={index} className="project-feature">
+									<div className="project-feature-bullet">•</div>
+									<div className="project-feature-text">{feature}</div>
+								</div>
+							))}
+						</div>
+					)}
 
+					<div className="project-links">
 						{linkText && (
 							<div className="project-link">
-								<div className="project-link-icon">
-								<FontAwesomeIcon icon={faLink} />
-								</div>
 								<Link to={link} target="_blank" rel="noopener noreferrer">
-								<div className="project-link-text">{linkText}</div>
+									<FontAwesomeIcon icon={faExternalLinkAlt} className="project-link-icon" />
+									<span className="project-link-text">{linkText}</span>
 								</Link>
 							</div>
 						)}
 						{linkViewDemoText && (
 							<div className="project-link">
-								<div className="project-link-icon">
-								<FontAwesomeIcon icon={faLink} />
-								</div>
 								<Link to={linkViewDemo} target="_blank" rel="noopener noreferrer">
-								<div className="project-link-text">{linkViewDemoText}</div>
+									<FontAwesomeIcon icon={faEye} className="project-link-icon" />
+									<span className="project-link-text">{linkViewDemoText}</span>
 								</Link>
 							</div>
 						)}
 					</div>
-				
+				</div>
 			</div>
 		</React.Fragment>
 	);

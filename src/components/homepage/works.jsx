@@ -56,9 +56,12 @@ const Works = (props) => {
 					<div className="homepage-works-date">
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
-					<div className="homepage-works-title">{title} <div className="homepage-works-logo">
+					<div className="homepage-works-title">
+						<div className="homepage-works-logo">
 							<img src={logo} alt="logo" />
-						</div></div>
+						</div>
+						<span className="homepage-works-title-text">{title}</span>
+					</div>
 					<div className="homepage-works-position">{position}</div>
 					<div className="homepage-works-description">
 						{description}

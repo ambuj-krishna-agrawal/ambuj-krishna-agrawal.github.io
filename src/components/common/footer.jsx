@@ -13,20 +13,23 @@ const Footer = () => {
 							<Link to="/">Home</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/articles">ML Projects</Link>
+							<Link to="/articles">ML Research</Link>
+						</li>
+						<li className="footer-nav-link-item">
+							<Link to="/mlprojects">AI Full Stack</Link>
 						</li>
 						<li className="footer-nav-link-item">
 							<Link to="/projects">Dev Projects</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/about">About</Link>
+							<Link to="/about">About me</Link>
 						</li>
 					</ul>
 				</div>
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						2024 - Ambuj Krishna Agrawal
+						2025 - Ambuj Krishna Agrawal
 					</div>
 				</div>
 			</div>

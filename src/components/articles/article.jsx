@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faCode, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "./style/article.css";
 
@@ -11,38 +11,49 @@ const Article = (props) => {
 	return (
 		<React.Fragment>
 			<div className="article">
-				<div className="article-left-side">
-					<div className="article-date">{date}</div>
-				</div>
-
-					<div className="article-right-side">
-						<div className="article-title">{title}</div>
-						<div className="article-description">{description}</div>
-						{guide && (<div className="article-metadata">Guide: <b>{guide}</b></div>)}
-						{institute && (<div className="article-metadata">Institute: <b>{institute}</b></div>)}
-						<div class="article-link-list">
+				<div className="article-content">
+					{date && (
+						<div className="homepage-education-date" style={{ marginBottom: '12px', maxWidth: 'fit-content' }}>
+							|&nbsp;&nbsp;&nbsp;{date}
+						</div>
+					)}
+					<div className="article-title">{title}</div>
+					<div className="article-description">{description}</div>
+					
+					<div className="article-metadata-container">
+						{guide && (
+							<div className="article-metadata">
+								<span className="article-metadata-label">Guide:</span> 
+								<span className="article-metadata-value">{guide}</span>
+							</div>
+						)}
+						{institute && (
+							<div className="article-metadata">
+								<span className="article-metadata-label">Institute:</span> 
+								<span className="article-metadata-value">{institute}</span>
+							</div>
+						)}
+					</div>
+					
+					<div className="article-link-list">
 						{codelink && (
 							<div className="article-link">
-								<div className="article-link-icon">
-								<FontAwesomeIcon icon={faLink} />
-								</div>
 								<Link to={codelink} target="_blank" rel="noopener noreferrer">
-								<div className="article-link-text">Code</div>
+									<FontAwesomeIcon icon={faCode} className="article-link-icon" />
+									<span className="article-link-text">Code</span>
 								</Link>
 							</div>
 						)}
 						{link && (
 							<div className="article-link">
-								<div className="article-link-icon">
-								<FontAwesomeIcon icon={faLink} />
-								</div>
 								<Link to={link} target="_blank" rel="noopener noreferrer">
-								<div className="article-link-text">{isPublished ? "Paper" : "Report"}</div>
+									<FontAwesomeIcon icon={isPublished ? faFileAlt : faFileAlt} className="article-link-icon" />
+									<span className="article-link-text">{isPublished ? "Paper" : "Report"}</span>
 								</Link>
 							</div>
 						)}
-						</div>
 					</div>
+				</div>
 			</div>
 		</React.Fragment>
 	);

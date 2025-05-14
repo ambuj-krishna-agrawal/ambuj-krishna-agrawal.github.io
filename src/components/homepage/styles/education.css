@@ -1,149 +1,150 @@
 @import "../../../data/styles.css";
 
 .homepage-education {
-	width: 90%;
-	mix-blend-mode: normal;
-	border-radius: 20px;
-	opacity: 1;
+	width: 100%;
+	margin-bottom: var(--space-lg);
+	border-bottom: 1px solid var(--quaternary-color);
+	padding-bottom: var(--space-md);
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: 0;
 }
 
-.homepage-education:hover {
-	background: #fafafa;
-	opacity: 1;
-	transition: background-color 0.3s ease-in-out;
+.homepage-education:last-child {
+	border-bottom: none;
 }
 
-
-.homepage-education-date:hover {
-	opacity: 1;
-    font-weight: 400;
-}
 
 .homepage-education-date {
-	opacity: 0.7;
-    text-align: left;
-	color: #606060;
-	font-size: 12px;
-    padding-bottom: 1em;
-    font-weight: 400;
+	display: inline-block;
+	background-color: var(--accent-soft);
+	color: var(--accent-color);
+	font-size: 13px;
+	font-weight: 500;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin-bottom: var(--space-sm);
 }
-
-.homepage-education-date_1:hover {
-	opacity: 1;
-    font-weight: 400;
-}
-
 
 .homepage-education-date_1 {
-	opacity: 0.7;
-    text-align: left;
-	color: #606060;
-	font-size: 12px;
-    padding-bottom: 0.5em;
-    font-weight: 400;
+	display: inline-block;
+	background-color: var(--accent-soft);
+	color: var(--accent-color);
+	font-size: 13px;
+	font-weight: 500;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin-bottom: var(--space-xs);
 }
 
 .homepage-education-title {
-	opacity: 1;
-	color: #404040;
-	font-size: 18px;
+	color: var(--primary-color);
+	font-size: 1.2rem;
 	margin-bottom: 0.5em;
-	font-weight: 700;
+	font-weight: 600;
+	font-family: var(--secondary-font);
 }
 
 
 .homepage-education-course {
-	opacity: 1;
-	color: #404040;
-	font-size: 16px;
-	font-weight: 700;
+	color: var(--primary-color);
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: var(--space-xs);
 }
 
-
 .homepage-education-institute {
-	opacity: 1;
-	color: var(--secondary-color);
-	font-size: 13px;
-    font-weight: 500;
+	color: #5e5b56;
+	font-size: 14px;
+	font-weight: 500;
 	line-height: 1.5;
-    padding-bottom: 1em;
+	margin-bottom: var(--space-md);
+	display: flex;
+	align-items: center;
+}
+
+.homepage-education-institute img {
+	margin-right: var(--space-sm);
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	padding: 3px;
+	background: linear-gradient(135deg, #f4f1eb 0%, #e9e3db 100%);
+	box-shadow: 0 2px 6px rgba(84, 80, 72, 0.08);
+	transition: all 0.3s ease;
+}
+
+.homepage-education:hover .homepage-education-institute img {
+	transform: scale(1.1);
+	box-shadow: 0 3px 8px rgba(84, 80, 72, 0.12);
 }
 
 .homepage-education-gpa {
-	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 12px;
-    font-weight: 500;
+	font-size: 13px;
+	font-weight: 500;
 	line-height: 1.5;
-    padding-bottom: 1em;
+	margin-bottom: var(--space-md);
 }
 
 .homepage-education-all-courses {
-	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 12px;
-    font-weight: 500;
-	line-height: 1.5;
-    padding-bottom: 2em;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.7;
+	margin-bottom: var(--space-lg);
 }
 
 .homepage-education-description {
-	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 13px;
-	line-height: 1.5;
-    padding-bottom: 1em;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: var(--space-md);
 }
 
 .homepage-education-link {
-	opacity: 1;
-	font-size: 15px;
-	font-weight: 700;
-    font-size: 11px;
-    display: flex;
-    text-decoration: none;
-    align-items: center;
+	font-size: 13px;
+	font-weight: 600;
+	display: inline-flex;
+	text-decoration: none;
+	align-items: center;
+	color: var(--link-color);
+	transition: color 0.2s ease;
 }
 
-.homepage-education-course {
-	padding-bottom: 2em;
-}
-
-.homepage-education-course {
-	opacity: 1;
-	color: var(--secondary-color);
-	font-size: 12px;
-    font-weight: 500;
-	line-height: 1.5;
+.homepage-education-link:hover {
+	color: var(--accent-color);
 }
 
 .homepage-education-course-name {
-	opacity: 1;
-	color: var(--secondary-color);
-	font-size: 12px;
-    font-weight: 500;
+	color: var(--primary-color);
+	font-size: 13px;
+	font-weight: 600;
 	line-height: 1.5;
-    padding-bottom: 0.5em;
+	margin-bottom: var(--space-xs);
 }
 
 .homepage-education-course-institute {
-	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 12px;
-    font-weight: 500;
+	font-size: 13px;
+	font-weight: 500;
 	line-height: 1.5;
-    padding-bottom: 0.5em;
+	margin-bottom: var(--space-sm);
 }
 
 .homepage-education-link-icon {
-	padding-right: 10px;
-	font-size: 11px;
-    text-decoration: none;
+	margin-right: var(--space-xs);
+	font-size: 12px;
 }
 
 .certificate-text {
-    color: var(--link-color);
-    text-decoration: none;
+	color: var(--link-color);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.certificate-text:hover {
+	color: var(--accent-color);
 }
 
 @media (max-width: 600px) {

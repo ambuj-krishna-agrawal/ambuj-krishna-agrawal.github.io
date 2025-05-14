@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import { faMailBulk, faBriefcase, faGraduationCap, faEye } from "@fortawesome/free-solid-svg-icons";
@@ -9,68 +9,27 @@ import {
 	faLinkedin,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import resume from '../assets/_AMBUJ_AGRAWAL.pdf';
 
-import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
+import Education from "../components/homepage/education";
 import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 import myEducation from "../data/education";
-
-import "./styles/homepage.css";
-import Education from "../components/homepage/education";
 import myWork from "../data/work";
 
-const Homepage = () => {
-	const [stayLogo, setStayLogo] = useState(false);
-	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
+import { initScrollReveal, addElementAnimations } from "../utils/animations";
 
+import "./styles/homepage.css";
+
+const Homepage = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			let scroll = Math.round(window.pageYOffset, 2);
-
-			let newLogoSize = 80 - (scroll * 4) / 10;
-
-			if (newLogoSize < oldLogoSize) {
-				if (newLogoSize > 40) {
-					setLogoSize(newLogoSize);
-					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else {
-					setStayLogo(true);
-				}
-			} else {
-				setLogoSize(newLogoSize);
-				setStayLogo(false);
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [logoSize, oldLogoSize]);
-
 	const currentSEO = SEO.find((item) => item.page === "home");
-
-	const logoStyle = {
-		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
-		zIndex: 999,
-		border: stayLogo ? "1px solid white" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-	};
 
 	return (
 		<React.Fragment>
@@ -86,38 +45,29 @@ const Homepage = () => {
 			<div className="page-content">
 				<NavBar active="home" />
 				<div className="content-wrapper">
-					<div className="homepage-logo-container">
-						<div style={logoStyle}>
-							<Logo width={logoSize} link={false} />
-						</div>
-					</div>
-
 					<div className="homepage-container">
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
+									{INFO.main.name}
+								</div>
+								
+								<div className="subtitle homepage-role">
 									{INFO.homepage.title}
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-								<span
-									dangerouslySetInnerHTML={{ __html: INFO.homepage.description }}
-								></span>
+									<span
+										dangerouslySetInnerHTML={{ __html: INFO.homepage.description }}
+									></span>
 								</div>
 								<div className="resume-download">
-									<p>Want to hire me?</p>
-								<div>
-								{/* <a href={resume} download className="download-button">
-									Download my resume!
-								</a> */}
+									<span className="hire-me-text">Want to hire me?</span>
 									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
-									<FontAwesomeIcon icon={faEye} /> View
+										<FontAwesomeIcon icon={faEye} /> View
 									</button>
 								</div>
 							</div>
-
-								</div>
-
 
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
@@ -132,124 +82,112 @@ const Homepage = () => {
 							</div>
 						</div>
 
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.topmate}
-								target="_blank"
-								rel="noreferrer"
-							>
-							<div className="homepage-social-icon-img">
-                    			<img src="/topmate.png" alt="Topmate" className="homepage-social-icon-img" />
+						<div className="homepage-socials-centered">
+							<div className="homepage-socials">
+								<a
+									href={INFO.socials.topmate}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<div className="homepage-social-icon-img">
+										<img src="/topmate.png" alt="Topmate" className="homepage-social-icon-img" />
+									</div>
+								</a>
+								<a
+									href={INFO.socials.linkedin}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FontAwesomeIcon
+										icon={faLinkedin}
+										className="homepage-social-icon"
+									/>
+								</a>
+								<a
+									href={INFO.socials.github}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FontAwesomeIcon
+										icon={faGithub}
+										className="homepage-social-icon"
+									/>
+								</a>
+								<a
+									href={INFO.socials.twitter}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FontAwesomeIcon
+										icon={faTwitter}
+										className="homepage-social-icon"
+									/>
+								</a>
+								<a
+									href={INFO.socials.instagram}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FontAwesomeIcon
+										icon={faInstagram}
+										className="homepage-social-icon"
+									/>
+								</a>
+								<a
+									href={`mailto:${INFO.main.email}`}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<FontAwesomeIcon
+										icon={faMailBulk}
+										className="homepage-social-icon"
+									/>
+								</a>
 							</div>
-							</a>
-							<a
-								href={INFO.socials.linkedin}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faLinkedin}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
 						</div>
 
-						{/* <div className="homepage-projects">
-							<AllProjects />
-						</div> */}
-
 						<div className="homepage-after-title">
-							<div className="homepage-education">
-							<h2 className="education-header">Education   <FontAwesomeIcon
-									icon={faGraduationCap}
-									className="homepage-social-icon"
-								/></h2>
+							<div className="homepage-education-list">
+								<h2 className="education-header">
+									Education <FontAwesomeIcon
+										icon={faGraduationCap}
+										className="homepage-social-icon"
+									/>
+								</h2>
 								{myEducation.map((education, index) => (
-									<div
-										className="homepage-education"
+									<Education
 										key={(index + 1).toString()}
-									>
-										<Education
-											key={(index + 1).toString()}
-											date={education().date}
-											title={education().title}
-											description={education().description}
-											courses={education().courses}
-											gpa={education().gpa}
-											institute={education().institute}
-											onlineCoursesList={education().onlineCoursesList}
-										/>
-									</div>
+										date={education().date}
+										title={education().title}
+										description={education().description}
+										courses={education().courses}
+										gpa={education().gpa}
+										institute={education().institute}
+										onlineCoursesList={education().onlineCoursesList}
+									/>
 								))}
 							</div>
 
-							<div className="homepage-work">
-							<h2 className="work-header">Work Experience <FontAwesomeIcon
-									icon={faBriefcase}
-									className="homepage-social-icon"
-								/></h2>
+							<div className="homepage-work-list">
+								<h2 className="work-header">
+									Work Experience <FontAwesomeIcon
+										icon={faBriefcase}
+										className="homepage-social-icon"
+									/>
+								</h2>
 								{myWork.map((work, index) => (
-									<div
-										className="homepage-work"
+									<Works
 										key={(index + 1).toString()}
-									>
-										<Works
-											key={(index + 1).toString()}
-											date={work().date}
-											title={work().title}
-											description={work().description}
-											internshipDescription={work().internship_description}
-											internshipDate={work().internship_date}
-											position={work().position}
-											logo={work().logo}
-										/>
-									</div>
+										date={work().date}
+										title={work().title}
+										description={work().description}
+										internshipDescription={work().internship_description}
+										internshipDate={work().internship_date}
+										position={work().position}
+										logo={work().logo}
+									/>
 								))}
 							</div>
-
-							{/* <div className="homepage-works">
-								<Works />
-							</div> */}
 						</div>
 
 						<div className="page-footer">

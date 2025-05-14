@@ -3,7 +3,7 @@ const INFO = {
 		title: "Portfolio",
 		name: "Ambuj Krishna Agrawal",
 		email: "ambujagrawal741@gmail.com",
-		logo: "../logo.png",
+		logo: "../logo_new.svg",
 	},
 
 	socials: {
@@ -25,7 +25,7 @@ const INFO = {
 	about: {
 		title: "Hello, I'm Ambuj",
 		description:
-		"This website showcases my portfolio, tracks my research endeavors, and facilitates collaboration.  Feel free to reach out via email or any of the social media links below for professional opportunities, collaborative projects, or simply to seek advice. Don't hesitate to connect, no matter the topic."
+		"This website showcases my portfolio, tracks my research endeavors, and facilitates collaboration.  Feel free to reach out via email or any of the social media links below for professional opportunities, collaborative projects, or simply to seek/give advice."
 	},
 
 	articles: {

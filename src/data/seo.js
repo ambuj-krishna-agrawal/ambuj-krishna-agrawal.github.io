@@ -12,7 +12,7 @@ const SEO = [
 	{
 		page: "about",
 		description:
-			"This website showcases my portfolio, tracks my research endeavors, and facilitates collaboration. Feel free to reach out via email or any of the social media links below for professional opportunities, collaborative projects, or simply to seek advice. Don't hesitate to connect, no matter the topic.",
+			"This website showcases my portfolio, tracks my research endeavors, and facilitates collaboration. Feel free to reach out via email or any of the social media links below for professional opportunities, collaborative projects, or simply to seek/give advice.",
 			keywords: ["Ambuj", "Ambuj Agrawal", "Ambuj Krishna Agrawal"],
 	},
 
@@ -28,6 +28,13 @@ const SEO = [
 		description:
 			"I've worked on a variety of software projects over the years in the industry as well as personally",
 			keywords: ["Ambuj", "Ambuj Agrawal", "Ambuj Krishna Agrawal"],
+	},
+	
+	{
+		page: "mlprojects",
+		description:
+			"Showcasing my journey in building real-world AI solutions and startups that combine cutting-edge machine learning with scalable full-stack development.",
+			keywords: ["Ambuj", "HelloSec AI", "AI Startups", "Machine Learning", "Security AI", "Full Stack ML"],
 	},
 
 	{
