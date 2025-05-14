@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./logo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/navBar.css";
 
 const NavBar = (props) => {
 	const { active } = props;
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen);
+	};
+
+	const closeMenu = () => {
+		setMenuOpen(false);
+	};
 
 	return (
 		<React.Fragment>
@@ -15,7 +26,12 @@ const NavBar = (props) => {
 						<div className="nav-logo">
 							<Logo width={48} link={true} />
 						</div>
-						<ul className="nav-list">
+						
+						<div className="mobile-menu-toggle" onClick={toggleMenu}>
+							<FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+						</div>
+						
+						<ul className={`nav-list ${menuOpen ? "nav-list-mobile-open" : ""}`}>
 							<li
 								className={
 									active === "articles"
@@ -23,7 +39,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/articles">ML Research</Link>
+								<Link to="/articles" onClick={closeMenu}>ML Research</Link>
 							</li>
 							<li
 								className={
@@ -32,7 +48,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/mlprojects">AI Full Stack</Link>
+								<Link to="/mlprojects" onClick={closeMenu}>AI Full Stack</Link>
 							</li>
 							<li
 								className={
@@ -41,7 +57,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/projects">Dev Projects</Link>
+								<Link to="/projects" onClick={closeMenu}>Dev Projects</Link>
 							</li>
 							<li
 								className={
@@ -50,7 +66,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/about">About me</Link>
+								<Link to="/about" onClick={closeMenu}>About me</Link>
 							</li>
 						</ul>
 					</div>

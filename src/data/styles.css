@@ -39,13 +39,19 @@
   /* ----------------------- */
 
   /* ------- layout ------- */
-  --content-width: 90%; /* Use percentage for more responsive width */
+  --content-width: 100%; /* Changed to 100% for mobile fullwidth */
   --content-padding: 2rem;
   --section-spacing: 3rem;
   --border-radius: 8px;
   --card-shadow: 0 1px 3px var(--shadow-color);
   --hover-shadow: 0 4px 8px var(--hover-shadow-color);
   /* ---------------------- */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --content-width: 90%; /* Only use percentage on larger screens */
+  }
 }
 
 /* Apply background color to body */

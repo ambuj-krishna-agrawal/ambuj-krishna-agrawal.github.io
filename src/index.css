@@ -12,6 +12,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--background);
 	color: var(--primary-color);
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,9 +59,17 @@ a:hover {
 }
 
 .container {
+	width: 100%;
 	max-width: var(--content-width);
 	margin: 0 auto;
 	padding: 0 var(--content-padding);
+	box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+	.container {
+		padding: 0 15px;
+	}
 }
 
 section {

@@ -138,6 +138,20 @@
 	100% { transform: perspective(800px) rotateY(-5deg) rotateX(3deg); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+	.animated-logo {
+		animation: none;
+		transform: none;
+	}
+	
+	.ring-draw, .node-pop, .line-fade {
+		animation: none;
+		opacity: 1;
+		transform: none;
+		stroke-dashoffset: 0;
+	}
+}
+
 /* Node animations */
 .node-pop {
 	transform: scale(0);
