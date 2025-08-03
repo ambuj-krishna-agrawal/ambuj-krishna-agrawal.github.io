@@ -10,7 +10,7 @@ function article_netflix() {
 		codelink: "",
 		isPublished: false,
 		description:
-		"Built a full-catalog audio retrieval system at Netflix to choose reference clips for style/emotion transfer from English to target languages in synthetic dubbing; fine-tuned wav2vec2-2B with contrastive loss for multilingual dubbing embeddings. Made an auto evaluation suite to automate the process of finding models/setups/hyperparameters that give better dub in the context of emotion/speaker style matching. Followed it up with a human evaluation study on Labelbox as well. Evaluations show an improvement of ~7.5% with auto evals and ~13% win rate with human preference (CMOS: +0.2) in the synthetic voice. The finetuned embedding model outperformed all the off-the-shelf models.",
+		"• Built a full-catalog audio retrieval system at Netflix to choose reference clips for style/emotion transfer from English to target languages in synthetic dubbing; fine-tuned wav2vec2-2B with contrastive loss for multilingual dubbing embeddings.\n• Made an auto evaluation suite to automate the process of finding models/setups/hyperparameters that give better dub in the context of emotion/speaker style matching. Followed it up with a human evaluation study on Labelbox as well.\n• Evaluations show an improvement of ~7.5% with auto evals and ~13% win rate with human preference (CMOS: +0.2) in the synthetic voice. The finetuned embedding model outperformed all the off-the-shelf models.",
 		keywords: [
 			"Audio Retrieval",
 			"Synthetic Dubbing",
@@ -38,7 +38,7 @@ function article_cmu_GPA() {
 		codelink: "https://github.com/shaily99/gpa",
 		isPublished: false,
 		description:
-		"Working as a Research Assistant under Dr. Fernando Diaz, leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs.",
+		"• Worked as a Research Assistant under Dr. Fernando Diaz, where we proposed a new evaluation framework that focuses on capturing granular and implicit human preferences through targeted masking and infilling.\n• Results show increase in inter-annotator agreement, lesser cognitive overload, and increased overall quality of human annotation.",
 		keywords: [
 			"Granular Preference",
 			"Preference Data",

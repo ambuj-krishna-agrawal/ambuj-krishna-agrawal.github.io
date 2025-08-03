@@ -18,7 +18,11 @@ const Article = (props) => {
 						</div>
 					)}
 					<div className="article-title">{title}</div>
-					<div className="article-description">{description}</div>
+					<div className="article-description">
+						{description.split('\n').map((line, index) => (
+							<div key={index} className="article-bullet-point">{line}</div>
+						))}
+					</div>
 					
 					<div className="article-metadata-container">
 						{guide && (

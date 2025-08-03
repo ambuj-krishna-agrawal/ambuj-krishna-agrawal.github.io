@@ -32,7 +32,7 @@ const Projects = () => {
 			<div className="page-content">
 				<NavBar active="projects" />
 				<div className="content-wrapper">
-					<div className="homepage-container">
+					<div className="projects-container">
 						<div className="title projects-title">
 							Things I've made
 						</div>

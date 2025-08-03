@@ -2,10 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
-	faTwitter,
 	faGithub,
 	faLinkedin,
-	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import INFO from "../../data/user";
@@ -29,19 +27,6 @@ const Socials = () => {
 				</a>
 			</div>
 
-			<div className="social-item">
-				<a href={INFO.socials.twitter} target="_blank" rel="noreferrer">
-					<FontAwesomeIcon icon={faTwitter} className="social-icon" />
-					<span className="social-text">Follow on Twitter</span>
-				</a>
-			</div>
-
-			<div className="social-item">
-				<a href={INFO.socials.instagram} target="_blank" rel="noreferrer">
-					<FontAwesomeIcon icon={faInstagram} className="social-icon" />
-					<span className="social-text">Follow on Instagram</span>
-				</a>
-			</div>
 
 			<div className="social-item email-item">
 				<a href={`mailto:${INFO.main.email}`} target="_blank" rel="noreferrer">

@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk, faBriefcase, faGraduationCap, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faMailBulk, faBriefcase, faGraduationCap, faEye, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
 	faGithub,
 	faLinkedin,
-	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Footer from "../components/common/footer";
@@ -46,36 +44,34 @@ const Homepage = () => {
 				<NavBar active="home" />
 				<div className="content-wrapper">
 					<div className="homepage-container">
-						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.main.name}
-								</div>
-								
-								<div className="subtitle homepage-role">
-									{INFO.homepage.title}
+						<div className="homepage-hero">
+							<div className="hero-content">
+								<div className="hero-text">
+									<h1 className="hero-name">
+										{INFO.main.name}
+									</h1>
+									
+									<h2 className="hero-title">
+										{INFO.homepage.title}
+									</h2>
+
+									<p className="hero-description">
+										I'm a Machine Learning Researcher specializing in NLP, currently working on LLM evaluation and RAG systems. With 3+ years of industry experience building scalable products.
+									</p>
+
+									<div className="hero-actions">
+										<button className="hero-resume-btn" onClick={() => window.open("https://drive.google.com/file/d/1ZMTYInZLOGM-644TizNRcP4Q2T0TN_Nm/view?usp=sharing", "_blank")}>
+											<FontAwesomeIcon icon={faEye} /> View Resume
+										</button>
+									</div>
 								</div>
 
-								<div className="subtitle homepage-subtitle">
-									<span
-										dangerouslySetInnerHTML={{ __html: INFO.homepage.description }}
-									></span>
-								</div>
-								<div className="resume-download">
-									<span className="hire-me-text">Want to hire me?</span>
-									<button className="view-resume" onClick={() => window.open("https://drive.google.com/file/d/1jJGUFDE7CmW0_Nh4er1ffneekyPCJkQq/view?usp=sharing", "_blank")}>
-										<FontAwesomeIcon icon={faEye} /> View
-									</button>
-								</div>
-							</div>
-
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
+								<div className="hero-image">
+									<div className="hero-image-wrapper">
 										<img
 											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
+											alt="Ambuj Krishna Agrawal"
+											className="hero-img"
 										/>
 									</div>
 								</div>
@@ -114,26 +110,6 @@ const Homepage = () => {
 									/>
 								</a>
 								<a
-									href={INFO.socials.twitter}
-									target="_blank"
-									rel="noreferrer"
-								>
-									<FontAwesomeIcon
-										icon={faTwitter}
-										className="homepage-social-icon"
-									/>
-								</a>
-								<a
-									href={INFO.socials.instagram}
-									target="_blank"
-									rel="noreferrer"
-								>
-									<FontAwesomeIcon
-										icon={faInstagram}
-										className="homepage-social-icon"
-									/>
-								</a>
-								<a
 									href={`mailto:${INFO.main.email}`}
 									target="_blank"
 									rel="noreferrer"
@@ -146,47 +122,114 @@ const Homepage = () => {
 							</div>
 						</div>
 
-						<div className="homepage-after-title">
-							<div className="homepage-education-list">
-								<h2 className="education-header">
-									Education <FontAwesomeIcon
-										icon={faGraduationCap}
-										className="homepage-social-icon"
+						<div className="homepage-main-content">
+							<div className="homepage-work-section">
+								<h2 className="work-header-main">
+									<FontAwesomeIcon
+										icon={faBriefcase}
+										className="section-icon"
 									/>
+									Work Experience
 								</h2>
-								{myEducation.map((education, index) => (
-									<Education
-										key={(index + 1).toString()}
-										date={education().date}
-										title={education().title}
-										description={education().description}
-										courses={education().courses}
-										gpa={education().gpa}
-										institute={education().institute}
-										onlineCoursesList={education().onlineCoursesList}
-									/>
-								))}
+								<div className="work-timeline">
+									{myWork.map((work, index) => (
+										<Works
+											key={(index + 1).toString()}
+											date={work().date}
+											title={work().title}
+											description={work().description}
+											internshipDescription={work().internship_description}
+											internshipDate={work().internship_date}
+											position={work().position}
+											logo={work().logo}
+										/>
+									))}
+								</div>
 							</div>
 
-							<div className="homepage-work-list">
-								<h2 className="work-header">
-									Work Experience <FontAwesomeIcon
-										icon={faBriefcase}
-										className="homepage-social-icon"
+							<div className="homepage-education-section">
+								<h2 className="education-header-main">
+									<FontAwesomeIcon
+										icon={faGraduationCap}
+										className="section-icon"
 									/>
+									Education
 								</h2>
-								{myWork.map((work, index) => (
-									<Works
-										key={(index + 1).toString()}
-										date={work().date}
-										title={work().title}
-										description={work().description}
-										internshipDescription={work().internship_description}
-										internshipDate={work().internship_date}
-										position={work().position}
-										logo={work().logo}
+								<div className="education-grid">
+									{myEducation.map((education, index) => (
+										<Education
+											key={(index + 1).toString()}
+											date={education().date}
+											title={education().title}
+											description={education().description}
+											courses={education().courses}
+											gpa={education().gpa}
+											institute={education().institute}
+											onlineCoursesList={education().onlineCoursesList}
+										/>
+									))}
+								</div>
+							</div>
+
+							<div className="homepage-highlights-preview">
+								<h2 className="highlights-header-main">
+									<FontAwesomeIcon
+										icon={faStar}
+										className="section-icon"
 									/>
-								))}
+									Key Highlights
+								</h2>
+								<div className="highlights-grid">
+									<div className="highlight-card">
+										<div className="highlight-header">
+											<div className="highlight-logo">
+												<img src="netflix.svg" alt="Netflix" />
+											</div>
+											<div className="highlight-company">NETFLIX</div>
+										</div>
+										<div className="highlight-title">ML Engineering Intern</div>
+										<div className="highlight-description">Built full-catalog audio retrieval system for style/emotion transfer in synthetic dubbing. Fine-tuned wav2vec2-2B with contrastive loss for multilingual embeddings</div>
+										<div className="highlight-impact">
+											Achieved ~13% improvement in human preference evaluations for TTS systems
+										</div>
+									</div>
+									
+									<div className="highlight-card">
+										<div className="highlight-header">
+											<div className="highlight-logo">
+												<img src="cmu.svg" alt="CMU" />
+											</div>
+											<div className="highlight-company">CMU</div>
+										</div>
+										<div className="highlight-title">Masters in Intelligent Information Systems</div>
+										<div className="highlight-description">Pursuing MIIS at Language Technologies Institute, SCS. Research Assistant under Dr. Fernando Diaz on LLM evaluation using granular human preference feedback</div>
+										<div className="highlight-impact">
+											3.92/4 GPA with coursework in Conversational AI, Multimodal ML, Advanced NLP
+										</div>
+									</div>
+									
+									<div className="highlight-card">
+										<div className="highlight-header">
+											<div className="highlight-logos-group">
+												<div className="highlight-logo-small">
+													<img src="cred_1.svg" alt="CRED" />
+												</div>
+												<div className="highlight-logo-small">
+													<img src="linkedin.png" alt="LinkedIn" />
+												</div>
+												<div className="highlight-logo-small">
+													<img src="elucidata.jpeg" alt="Elucidata" />
+												</div>
+											</div>
+											<div className="highlight-company">INDUSTRY</div>
+										</div>
+										<div className="highlight-title">3+ Years Backend Engineering</div>
+										<div className="highlight-description">Senior roles at CRED (bill payments platform, 5M+ users) and LinkedIn (Account Protection Team, authentication security). Built scalable microservices from scratch</div>
+										<div className="highlight-impact">
+											Delivered products serving millions of users with focus on security and scalability
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 

@@ -27,11 +27,11 @@ const NetflixProject = () => {
             <div className="netflix-overview">
                 <div className="netflix-overview-content">
                     <h3>Project Overview</h3>
-                    <p>
-                        Developed an advanced audio retrieval system at Netflix to revolutionize synthetic dubbing by enabling 
-                        precise style and emotion transfer from English reference clips to target languages. This system leverages 
-                        state-of-the-art machine learning techniques to maintain emotional authenticity across language barriers.
-                    </p>
+                    <div className="netflix-bullet-points">
+                        <p>• Built a full-catalog audio retrieval system at Netflix to choose reference clips for style/emotion transfer from English to target languages in synthetic dubbing; fine-tuned wav2vec2-2B with contrastive loss for multilingual dubbing embeddings.</p>
+                        <p>• Made an auto evaluation suite to automate the process of finding models/setups/hyperparameters that give better dub in the context of emotion/speaker style matching. Followed it up with a human evaluation study on Labelbox as well.</p>
+                        <p>• Evaluations show an improvement of ~7.5% with auto evals and ~13% win rate with human preference (CMOS: +0.2) in the synthetic voice. The finetuned embedding model outperformed all the off-the-shelf models.</p>
+                    </div>
                 </div>
             </div>
 
