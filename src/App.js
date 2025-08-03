@@ -19,8 +19,7 @@ function App() {
     }, []);
     return ( 
         <div className="App">
-			{console.log("hello " + process.env.PUBLIC_URL)}
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="about" element={<About />} />
