@@ -23,7 +23,7 @@ const MLProjects = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>{`Full Stack ML Projects | ${INFO.main.title}`}</title>
+                <title>{`AI Full Stack Projects | ${INFO.main.title}`}</title>
                 <meta name="description" content={currentSEO.description} />
                 <meta name="keywords" content={currentSEO.keywords.join(", ")} />
             </Helmet>

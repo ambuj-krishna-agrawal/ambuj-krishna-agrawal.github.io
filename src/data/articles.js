@@ -1,5 +1,32 @@
 import React from "react";
 
+function article_netflix() {
+	return {
+		date: "May 2025 – Aug 2025",
+		title: "Multilingual Audio Retrieval for Synthetic Dubbing",
+		link: "",
+		guide: "Netflix Localization Team",
+		institute: "Netflix",
+		codelink: "",
+		isPublished: false,
+		description:
+		"Built a full-catalog audio retrieval system at Netflix to choose reference clips for style/emotion transfer from English to target languages in synthetic dubbing; fine-tuned wav2vec2-2B with contrastive loss for multilingual dubbing embeddings. Made an auto evaluation suite to automate the process of finding models/setups/hyperparameters that give better dub in the context of emotion/speaker style matching. Followed it up with a human evaluation study on Labelbox as well. Evaluations show an improvement of ~7.5% with auto evals and ~13% win rate with human preference (CMOS: +0.2) in the synthetic voice. The finetuned embedding model outperformed all the off-the-shelf models.",
+		keywords: [
+			"Audio Retrieval",
+			"Synthetic Dubbing",
+			"wav2vec2",
+			"Contrastive Loss",
+			"Multilingual Embeddings",
+			"Evaluation Suite",
+			"Human Preference",
+			"Netflix",
+			"Ambuj",
+			"Ambuj Krishna Agrawal",
+			"Ambuj Agrawal",
+		]
+	};
+}
+
 
 function article_cmu_GPA() {
 	return {
@@ -216,6 +243,6 @@ function article_4() {
 	};
 }
 
-const myArticles = [article_cmu_GPA, article_cmu_emo_tts, routers_cmu_anlp, web_agents_cmu_anlp, article_cmu_rag, article_1, article_2, article_3, article_4];
+const myArticles = [article_netflix, article_cmu_GPA, article_cmu_emo_tts, routers_cmu_anlp, web_agents_cmu_anlp, article_cmu_rag, article_1, article_2, article_3, article_4];
 
 export default myArticles;
