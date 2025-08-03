@@ -28,11 +28,11 @@
 }
 
 .projects-title {
-	text-align: center;
+	text-align: left;
 }
 
 .projects-subtitle {
-	text-align: center;
+	text-align: left;
 	margin-bottom: 30px;
 }
 
@@ -74,6 +74,15 @@
 		max-width: 100% !important;
 		margin-bottom: 20px !important;
 		box-sizing: border-box !important;
+	}
+
+	/* Project title and subtitle mobile centering */
+	.projects-title {
+		text-align: center;
+	}
+
+	.projects-subtitle {
+		text-align: center;
 	}
 
 	/* Project Cards Mobile */
@@ -185,10 +194,12 @@
 	
 	.projects-title {
 		font-size: 2.2rem;
+		text-align: left;
 	}
 	
 	.projects-subtitle {
 		font-size: 1.15rem;
+		text-align: left;
 	}
 }
 
