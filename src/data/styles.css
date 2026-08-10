@@ -21,6 +21,11 @@
 	--stone: #8a8175;
 	--stone-soft: rgba(138, 129, 117, 0.15);
 
+	/* creative spark — used sparingly against the earthy palette */
+	--gold: #b9832c;
+	--gold-soft: rgba(185, 131, 44, 0.16);
+	--gold-hi: #d29b3f;
+
 	--nav-glass: rgba(247, 240, 227, 0.72);
 	--card: #fbf6ec;
 	--card-hover: #f6efe0;
@@ -67,9 +72,26 @@
 	--radius-lg: 20px;
 }
 
-html,
-body {
+html {
 	background: var(--bg);
+}
+
+/* Warm ambient wash — painted on body's own background (not a fixed
+   pseudo-element) so it scrolls with the page and covers the full
+   document height. No more hard seam where a capped viewport-height
+   glow used to end and flat color abruptly took over. Pools are placed
+   at proportional positions (top / upper-mid / mid / lower-mid / near
+   footer) so any page, long or short, always reads as one continuous
+   lamp-lit space instead of two different backgrounds. */
+body {
+	background:
+		radial-gradient(38% 22% at 12% 6%, rgba(217, 123, 61, 0.22) 0%, transparent 72%),
+		radial-gradient(32% 18% at 92% 4%, rgba(107, 125, 90, 0.16) 0%, transparent 72%),
+		radial-gradient(30% 16% at 6% 34%, rgba(185, 131, 44, 0.16) 0%, transparent 72%),
+		radial-gradient(34% 18% at 96% 58%, rgba(107, 125, 90, 0.13) 0%, transparent 72%),
+		radial-gradient(30% 16% at 10% 78%, rgba(185, 131, 44, 0.13) 0%, transparent 72%),
+		radial-gradient(38% 20% at 88% 96%, rgba(193, 98, 45, 0.16) 0%, transparent 72%),
+		var(--bg);
 	color: var(--ink);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
@@ -86,21 +108,6 @@ body::before {
 	opacity: 0.35;
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.62  0 0 0 0 0.48  0 0 0 0 0.24  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 	mix-blend-mode: multiply;
-}
-
-/* Warm ambient wash behind hero */
-body::after {
-	content: "";
-	position: fixed;
-	inset: -20% -10% auto -10%;
-	height: 80vh;
-	pointer-events: none;
-	z-index: 0;
-	background:
-		radial-gradient(60% 60% at 12% 12%, rgba(217, 123, 61, 0.20) 0%, transparent 60%),
-		radial-gradient(50% 50% at 92% 6%, rgba(107, 125, 90, 0.14) 0%, transparent 65%),
-		radial-gradient(60% 40% at 50% 100%, rgba(193, 98, 45, 0.08) 0%, transparent 70%);
-	filter: blur(2px);
 }
 
 #root {
@@ -125,14 +132,17 @@ a:hover {
 .accent-ember { color: var(--ember); }
 .accent-moss  { color: var(--moss); }
 .accent-stone { color: var(--stone); }
+.accent-gold  { color: var(--gold); }
 
 .bg-accent-ember { background: var(--ember-soft); }
 .bg-accent-moss  { background: var(--moss-soft); }
 .bg-accent-stone { background: var(--stone-soft); }
+.bg-accent-gold  { background: var(--gold-soft); }
 
 .stripe-ember { border-left: 3px solid var(--ember); }
 .stripe-moss  { border-left: 3px solid var(--moss); }
 .stripe-stone { border-left: 3px solid var(--stone); }
+.stripe-gold  { border-left: 3px solid var(--gold); }
 
 /* smoothed transitions on interactive surfaces */
 a, button, .card, .nav-item, .chip {
@@ -150,18 +160,6 @@ a, button, .card, .nav-item, .chip {
 
 /* ------- Time-of-day drift ------- */
 /* Very subtle — same palette family, just phase-shifted. */
-html.time-morning body::after {
-	filter: hue-rotate(-4deg) brightness(1.06) saturate(1.05);
-}
-html.time-midday body::after {
-	/* default */
-}
-html.time-evening body::after {
-	filter: hue-rotate(4deg) brightness(0.98) saturate(1.12);
-}
-html.time-night body::after {
-	filter: hue-rotate(7deg) brightness(0.9) saturate(1.18);
-}
 html.time-night { --bg: #efe6d3; }
 html.time-evening { --bg: #f5ecdb; }
 html.time-morning { --bg: #f9f2e0; }

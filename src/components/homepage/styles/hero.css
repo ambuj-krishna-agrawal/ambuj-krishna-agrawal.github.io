@@ -25,11 +25,15 @@
 	font-weight: 600;
 }
 .hero-cursor {
-	color: var(--ember);
-	animation: hero-cursor-blink 1.4s steps(2, end) infinite;
+	color: var(--gold);
+	text-shadow: 0 0 10px var(--gold-soft);
+	animation: hero-cursor-flicker 2.6s ease-in-out infinite;
 }
-@keyframes hero-cursor-blink {
-	50% { opacity: 0; }
+@keyframes hero-cursor-flicker {
+	0%, 100% { opacity: 1; }
+	45% { opacity: 0.4; }
+	55% { opacity: 0.85; }
+	75% { opacity: 0.55; }
 }
 
 .hero-intro {
@@ -151,7 +155,9 @@
 	inset: -20% -20% auto auto;
 	width: 70%;
 	height: 70%;
-	background: radial-gradient(circle at center, rgba(217, 123, 61, 0.45), transparent 70%);
+	background:
+		radial-gradient(circle at 35% 65%, rgba(185, 131, 44, 0.35), transparent 65%),
+		radial-gradient(circle at center, rgba(217, 123, 61, 0.45), transparent 70%);
 	filter: blur(20px);
 	pointer-events: none;
 }

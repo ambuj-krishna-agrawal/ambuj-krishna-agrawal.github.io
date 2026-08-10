@@ -23,7 +23,7 @@
     {
       "company": "Netflix",
       "logo": "/netflix.svg",
-      "accent": "moss",
+      "accent": "gold",
       "position": "ML Engineering Intern",
       "date": "Summer 2025",
       "summary": "Full-catalog audio retrieval for style / emotion transfer in synthetic dubbing.",
