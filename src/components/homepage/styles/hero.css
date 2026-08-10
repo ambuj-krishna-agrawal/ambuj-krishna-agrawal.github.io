@@ -184,6 +184,23 @@
 	}
 	.hero-portrait-caption { text-align: center; }
 	.hero-greeting { font-size: clamp(2.4rem, 10vw, 3.4rem); }
+
+	/* Keep the CTA row on a single line on every phone width instead of
+	   letting the last icon wrap onto its own row — scroll it if needed. */
+	.hero-cta-row {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		padding-bottom: 2px;
+		margin-left: calc(-1 * var(--space-md));
+		margin-right: calc(-1 * var(--space-md));
+		padding-left: var(--space-md);
+		padding-right: var(--space-md);
+	}
+	.hero-cta-row::-webkit-scrollbar { display: none; }
+	.hero-cta-row > * { flex-shrink: 0; }
 }
 @media (max-width: 480px) {
 	.hero-portrait-frame { width: 150px; }
