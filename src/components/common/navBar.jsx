@@ -21,6 +21,11 @@ const NavBar = ({ active }) => {
 
 	const close = () => setMenuOpen(false);
 
+	useEffect(() => {
+		document.body.classList.toggle("nav-menu-open", menuOpen);
+		return () => document.body.classList.remove("nav-menu-open");
+	}, [menuOpen]);
+
 	return (
 		<header className={`nav-shell ${scrolled ? "nav-shell--scrolled" : ""}`}>
 			<div className="nav-inner">
@@ -32,10 +37,17 @@ const NavBar = ({ active }) => {
 				<button
 					className="nav-toggle"
 					onClick={() => setMenuOpen((v) => !v)}
-					aria-label="Menu"
+					aria-label={menuOpen ? "Close menu" : "Open menu"}
+					aria-expanded={menuOpen}
 				>
 					<FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
 				</button>
+
+				<div
+					className={`nav-scrim ${menuOpen ? "is-open" : ""}`}
+					onClick={close}
+					aria-hidden="true"
+				/>
 
 				<nav className={`nav-links ${menuOpen ? "nav-links--open" : ""}`}>
 					{NAV.map((item) => (
