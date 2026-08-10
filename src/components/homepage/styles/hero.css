@@ -174,7 +174,7 @@
 		text-align: left;
 		padding: var(--space-md) 0 var(--space-lg);
 	}
-	.hero-portrait { order: -1; align-items: flex-start; }
+	.hero-portrait { order: -1; align-items: center; }
 	.hero-portrait-frame {
 		width: 180px;
 		max-width: 60vw;
@@ -182,7 +182,7 @@
 		border-radius: 24px;
 		animation: none;
 	}
-	.hero-portrait-caption { text-align: left; }
+	.hero-portrait-caption { text-align: center; }
 	.hero-greeting { font-size: clamp(2.4rem, 10vw, 3.4rem); }
 }
 @media (max-width: 480px) {
