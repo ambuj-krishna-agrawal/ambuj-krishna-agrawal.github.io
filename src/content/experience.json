@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "id": "snowflake-2026",
+      "company": "Snowflake",
+      "logo": "/snowflake.png",
+      "position": "Applied AI Engineer",
+      "date": "Jan 2026 – Present",
+      "team": "AI agent memory for data analysts",
+      "description": "Working on representations for AI agent memory to empower data analysts. Sources include structured and unstructured company data — both directly provided by the company and fetched via authenticated third-party connectors — and the representations include knowledge graphs, extracted skills, table metadata and domain extraction. Built the entire pipeline for incremental ingestion and the serving layer (graph traversal) to provide a cost-effective and smooth experience for consumers.",
+      "accent": "ember",
+      "keywords": [
+        "Snowflake",
+        "Applied AI",
+        "AI Agent Memory",
+        "Knowledge Graph",
+        "Data Analyst",
+        "Incremental Ingestion",
+        "Graph Traversal"
+      ]
+    },
+    {
+      "id": "cmu-2024",
+      "company": "Carnegie Mellon University",
+      "logo": "/cmu.svg",
+      "position": "Machine Learning Researcher",
+      "date": "Sep 2024 – Jan 2026",
+      "team": "Language Technologies Institute",
+      "description": "Research Assistant under Dr. Fernando Diaz. Leveraging granular and implicit human preference feedback through infilling and edits to enhance personalization and reduce cognitive load in comparing LLM-based system outputs. Also contributed to research on population-level trajectory sharing across LLM agent populations (MATM).",
+      "accent": "moss",
+      "keywords": [
+        "CMU",
+        "LTI",
+        "Machine Learning",
+        "LLM Evaluation",
+        "Fernando Diaz",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "netflix-2025",
+      "company": "Netflix",
+      "logo": "/netflix.svg",
+      "position": "Machine Learning Engineering Intern",
+      "date": "May 2025 – Aug 2025",
+      "team": "Localization",
+      "description": "Built a full-catalog audio retrieval system for style/emotion transfer in synthetic dubbing. Fine-tuned wav2vec2-2B with contrastive loss for multilingual embeddings and built automated evaluation suites — ~13% improvement in human preference evaluations.",
+      "accent": "ember",
+      "keywords": [
+        "Netflix",
+        "TTS",
+        "Diffusion",
+        "wav2vec2",
+        "Contrastive Loss",
+        "Localization",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cred-2021",
+      "company": "CRED",
+      "logo": "/cred_1.svg",
+      "position": "Senior Backend Engineer",
+      "date": "Feb 2023 – Jul 2024",
+      "team": "Bill Payments Platform",
+      "description": "Worked on the bill payments platform powering services like credit card payments, gift cards, vouchers, electricity, education, rent etc., serving 5 million+ monthly transacting users.",
+      "internship": {
+        "date": "Feb 2021 – Jun 2021",
+        "description": "Made a complete backend microservice from scratch for a new line of utility product on CRED for BNPL (Buy Now, Pay Later)."
+      },
+      "accent": "stone",
+      "keywords": [
+        "CRED",
+        "Backend",
+        "Bill Payments",
+        "BNPL",
+        "Microservices",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "linkedin-2020",
+      "company": "LinkedIn",
+      "logo": "/linkedin.png",
+      "position": "Software Development Engineer",
+      "date": "Jul 2021 – Feb 2023",
+      "team": "Account Protection",
+      "description": "Worked on the Account Protection Team whose objective is safeguarding members' privacy and data from different attack vectors like scraping, phishing, replay, and man-in-the-middle attacks. The team also handles the user login experience, maintains session and members' sensitive information.",
+      "internship": {
+        "date": "May 2020 – Jul 2020",
+        "description": "Made APIs for a new architecture for storing phone numbers handling various edge cases. Came up with a clustering algorithm to generate the required number of regexes for phone number validation to replace Google's libphonenumber."
+      },
+      "accent": "stone",
+      "keywords": [
+        "LinkedIn",
+        "Account Protection",
+        "Auth",
+        "Phone number",
+        "libphonenumber",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "elucidata-2020",
+      "company": "Elucidata",
+      "logo": "/elucidata.jpeg",
+      "position": "Fullstack Internship",
+      "date": "Oct 2020 – Jan 2021",
+      "team": "Pfizer collaboration",
+      "description": "Worked in close collaboration with the Pfizer team as a client to develop different automated workflows needed for vaccine generation by the researchers at Pfizer.",
+      "accent": "stone",
+      "keywords": ["Elucidata", "Pfizer", "Fullstack", "Ambuj Agrawal"]
+    }
+  ]
+}

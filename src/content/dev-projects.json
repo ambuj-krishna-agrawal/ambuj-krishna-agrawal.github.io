@@ -1,0 +1,203 @@
+{
+  "_note": "Older engineering + hackathon work. Set tier:'selected' to surface as a card; tier:'archive' collapses into a compact row. All entries are still clickable for detail.",
+  "items": [
+    {
+      "id": "cellpilot-hack",
+      "title": "CellPilot — AI agent for closed-loop cell culture",
+      "company": "Team InstaLab, 24hr AI Science Cell Culture Hack @ Monomer Bio",
+      "tier": "selected",
+      "year": "2026",
+      "tag": "1st place",
+      "description": "With team InstaLab at Monomer Bio's 24-hour AI Science Cell Culture Hack, we built CellPilot: an AI agent that closes the loop between a scientist and a 6-axis UR12e robotic arm doing wet-lab cell culture. The agent reasons over live microscopy images and consults Elnora to make real-time decisions — harvest or split when cells are too dense, extend incubation when they're too sparse, and page the scientist immediately on suspected contamination. We also started a digital-twin framework so the workflow can be replayed and generalised across labs, not just this one bench.",
+      "outcomes": [
+        "Best Overall (1st prize) at the 24-hour AI Science Cell Culture Hack @ Monomer Bio",
+        "0 → 1 in 24 hours: agent reasoning, microscopy vision, and robotic-arm control loop, live on demo day",
+        "Digital-twin framework started so the workflow can be replayed and adapted to other labs"
+      ],
+      "link": "https://www.linkedin.com/posts/adenisin_elnora-ai-agent-for-lab-protocols-activity-7439425872790548480-2TXd",
+      "keywords": [
+        "CellPilot",
+        "InstaLab",
+        "Monomer Bio",
+        "Cell Culture",
+        "Robotic Arm",
+        "UR12e",
+        "Digital Twin",
+        "Elnora",
+        "Hackathon",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cred-vouchers",
+      "title": "Vouchers & Gift Cards",
+      "company": "CRED",
+      "logo": "/cred_1.svg",
+      "tier": "selected",
+      "year": "2023",
+      "tag": "Product",
+      "description": "Created a new line of product that allows users to buy vouchers and gift cards from various brands and get cashback on them.",
+      "outcomes": [
+        "Increased our revenue by 100k USD per month",
+        "Onboarded 11 merchants in our first launch",
+        "Collaborated across verticals to deliver the product on time",
+        "Added real-time monitoring/tracking of bought products"
+      ],
+      "keywords": ["CRED", "Vouchers", "Gift Cards"]
+    },
+    {
+      "id": "cred-nba",
+      "title": "Next Best Action for Credit Card Management",
+      "company": "CRED",
+      "logo": "/cred_1.svg",
+      "tier": "archive",
+      "year": "2023",
+      "tag": "ML / Product",
+      "description": "Developed a system that predicts the next best action for a user to take in order to maximize their engagement with the CRED ecosystem.",
+      "outcomes": [
+        "5% increase in user consenting to our cred-product service",
+        "Created heuristics to reduce the time before which a new statement can be found for a user",
+        "Developed heuristics to reduce user anxiety on our home page by answering the question, \"Where is my statement?\""
+      ],
+      "keywords": ["CRED", "Next Best Action", "Credit Card"]
+    },
+    {
+      "id": "cred-maker-checker",
+      "title": "Hackathon: Maker-Checker platform for teams to deploy product configs",
+      "company": "CRED",
+      "logo": "/cred_1.svg",
+      "tier": "archive",
+      "year": "2023",
+      "tag": "Platform",
+      "description": "Developed a platform that allows teams to deploy product configurations in a safe and secure manner.",
+      "outcomes": [
+        "Team stood 3rd in 75+ submissions, scoring ESOPs along with cash",
+        "Estimated savings of approx 500k USD per year for CRED",
+        "Reduced the number of incidents because of human errors while copying stage configs to production"
+      ],
+      "keywords": ["CRED", "Maker-Checker", "Config Deploy", "Hackathon"]
+    },
+    {
+      "id": "cred-memory-leak",
+      "title": "Solving Native Memory Leak in JAVA",
+      "company": "CRED",
+      "logo": "/cred_1.svg",
+      "tier": "selected",
+      "year": "2022",
+      "tag": "Perf",
+      "description": "Debugged a memory leak in JAVA services running with glibc memory allocator causing fragmentation leading to 100% memory consumption of containers.",
+      "outcomes": [
+        "Many services across CRED saw a decrease of up to 25% in memory consumption"
+      ],
+      "keywords": ["JAVA", "Memory Leak", "glibc", "CRED"]
+    },
+    {
+      "id": "linkedin-auth-cookies",
+      "title": "Enhancing Authentication Cookie Security",
+      "company": "LinkedIn",
+      "logo": "/linkedin.png",
+      "tier": "archive",
+      "year": "2022",
+      "tag": "Security",
+      "description": "Changed the encryption signature used to store authentication cookies in the browser used to maintain user sessions.",
+      "outcomes": [
+        "Team onboarded more than 1000 services across LinkedIn to a new type of tokens",
+        "Addressed a major security vulnerability in the system",
+        "Learnt the importance of benchmarking encryption algorithms and their performance impact on the system"
+      ],
+      "keywords": ["LinkedIn", "Auth Cookies", "Encryption", "Session"]
+    },
+    {
+      "id": "linkedin-fb-signin",
+      "title": "Launching Sign In With Facebook",
+      "company": "LinkedIn",
+      "logo": "/linkedin.png",
+      "tier": "archive",
+      "year": "2021",
+      "tag": "Auth",
+      "description": "Developed the system to securely allow users to sign in with Facebook on LinkedIn.",
+      "outcomes": [
+        "Took care of replay attacks using stolen access tokens",
+        "Resulted in +ve WAU for some countries and certain demographics"
+      ],
+      "keywords": ["LinkedIn", "Sign In", "Facebook", "Replay attacks"]
+    },
+    {
+      "id": "linkedin-google-replay",
+      "title": "Stopping Replay Attacks on Sign In with Google",
+      "company": "LinkedIn",
+      "logo": "/linkedin.png",
+      "tier": "archive",
+      "year": "2022",
+      "tag": "Security",
+      "description": "Worked with web, iOS and Android teams to solutionise the way to stop replay attacks on Sign In with Google.",
+      "outcomes": [
+        "Aligned different platform teams on the way to stop replay attacks"
+      ],
+      "keywords": ["LinkedIn", "Sign In", "Google", "Replay attacks"]
+    },
+    {
+      "id": "linkedin-whatsapp",
+      "title": "Adding WhatsApp for job notifications",
+      "company": "LinkedIn",
+      "logo": "/linkedin.png",
+      "tier": "archive",
+      "year": "2022",
+      "tag": "Product",
+      "description": "Securely stored WhatsApp numbers and used them to run campaigns after getting the permission from the users.",
+      "outcomes": [
+        "Major effort to move away from SMS to WhatsApp for all types of notifications (even secure ones)"
+      ],
+      "keywords": ["LinkedIn", "WhatsApp", "Notifications"]
+    },
+    {
+      "id": "oxytracker",
+      "title": "OxyTracker",
+      "company": "Haryana Govt.",
+      "logo": "/oxyTracker.png",
+      "tier": "archive",
+      "year": "2021",
+      "tag": "Civic",
+      "link": "https://github.com/ambuj-krishna-agrawal/OxyTracker",
+      "description": "Project made for Haryana Govt. (India) to track oxygen cylinders during the peak of the covid second wave in India. Facilitated the flow and tracking of cylinders to civilians and doctors from distributors identified by QR code and cylinder number.",
+      "outcomes": [
+        "Product featured in news articles and appreciated",
+        "Resulted in faster delivery of oxygen cylinders to the needy and enhanced tracking of the same"
+      ],
+      "keywords": ["OxyTracker", "COVID", "Haryana", "QR"]
+    },
+    {
+      "id": "learn-ai",
+      "title": "learn.ai",
+      "company": "Hack 36, MNNIT Allahabad",
+      "logo": "/learn_ai.jpg",
+      "tier": "archive",
+      "year": "2020",
+      "tag": "Education",
+      "link": "https://github.com/zerefwayne/learn.ai",
+      "description": "As a part of a hackathon, worked with team to make a platform to help the learning of machine learning in a playful and engaging way where the users can interact with objects to make a customized model and get corresponding PyTorch code in realtime.",
+      "outcomes": [
+        "Stood top 10 in 300+ submissions for Hack 36 organized by MNNIT Allahabad, India",
+        "Used p5.js to create a playground for the student to play around with models"
+      ],
+      "keywords": ["learn.ai", "Hackathon", "PyTorch", "p5.js"]
+    },
+    {
+      "id": "sync-it",
+      "title": "Sync-It",
+      "company": "Hack the Mountain 2.0",
+      "logo": "/sync.svg",
+      "tier": "archive",
+      "year": "2020",
+      "tag": "Media",
+      "link": "https://github.com/ambuj-krishna-agrawal/yt-sp-convertor",
+      "demo": "https://www.youtube.com/watch?v=xoaOH6OjWFM&list=LL",
+      "description": "Made a platform that converts a YouTube playlist to a Spotify playlist and vice versa. Optimized the searching and mapping algorithm that powered this conversion to give better results than anything in the market.",
+      "outcomes": [
+        "Stood 7th in 250+ submissions for Hack the Mountain 2.0",
+        "Best in class conversion based on a lot of heuristics applied on Spotify data"
+      ],
+      "keywords": ["Sync-It", "Spotify", "YouTube", "Playlist"]
+    }
+  ]
+}

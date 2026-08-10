@@ -1,78 +1,64 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "./logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 
+import { NAV } from "../../lib/content";
+import { requestLampOff } from "../../lib/lampControl";
 import "./styles/navBar.css";
 
-const NavBar = (props) => {
-	const { active } = props;
+const NavBar = ({ active }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 
-	const toggleMenu = () => {
-		setMenuOpen(!menuOpen);
-	};
+	useEffect(() => {
+		const onScroll = () => setScrolled(window.scrollY > 12);
+		window.addEventListener("scroll", onScroll, { passive: true });
+		onScroll();
+		return () => window.removeEventListener("scroll", onScroll);
+	}, []);
 
-	const closeMenu = () => {
-		setMenuOpen(false);
-	};
+	const close = () => setMenuOpen(false);
 
 	return (
-		<React.Fragment>
-			<div className="nav-container">
-				<nav className="navbar">
-					<div className="nav-background">
-						<div className="nav-logo">
-							<Logo width={48} link={true} />
-						</div>
-						
-						<div className="mobile-menu-toggle" onClick={toggleMenu}>
-							<FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-						</div>
-						
-						<ul className={`nav-list ${menuOpen ? "nav-list-mobile-open" : ""}`}>
-							<li
-								className={
-									active === "articles"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/articles" onClick={closeMenu}>ML Research</Link>
-							</li>
-							<li
-								className={
-									active === "mlprojects"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/mlprojects" onClick={closeMenu}>AI Full Stack</Link>
-							</li>
-							<li
-								className={
-									active === "projects"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/projects" onClick={closeMenu}>Dev Projects</Link>
-							</li>
-							<li
-								className={
-									active === "about"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/about" onClick={closeMenu}>About me</Link>
-							</li>
-						</ul>
-					</div>
+		<header className={`nav-shell ${scrolled ? "nav-shell--scrolled" : ""}`}>
+			<div className="nav-inner">
+				<Link to="/" className="nav-brand" title="Home" onClick={close}>
+					<span className="nav-brand-mark serif">A.</span>
+					<span className="nav-brand-name">Ambuj</span>
+				</Link>
+
+				<button
+					className="nav-toggle"
+					onClick={() => setMenuOpen((v) => !v)}
+					aria-label="Menu"
+				>
+					<FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+				</button>
+
+				<nav className={`nav-links ${menuOpen ? "nav-links--open" : ""}`}>
+					{NAV.map((item) => (
+						<Link
+							key={item.key}
+							to={item.href}
+							className={`nav-item ${active === item.key ? "nav-item--active" : ""}`}
+							onClick={close}
+						>
+							{item.label}
+						</Link>
+					))}
+					<button
+						className="nav-lamp"
+						onClick={() => { close(); requestLampOff(); }}
+						title="Turn the light off"
+						aria-label="Turn the light off"
+					>
+						<FontAwesomeIcon icon={faLightbulb} />
+					</button>
 				</nav>
 			</div>
-		</React.Fragment>
+		</header>
 	);
 };
 

@@ -1,0 +1,92 @@
+.role-timeline { margin-top: var(--space-xxl); }
+
+.rt-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+.rt-item {
+	background: var(--bg-elev);
+	padding: 20px 22px;
+	border-radius: var(--radius);
+	border: 1px solid var(--card-border);
+	transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.rt-item:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow);
+}
+.rt-date {
+	font-size: 0.78rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--ink-mute);
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.rt-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+.rt-logo {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border: 1px solid var(--card-border);
+}
+.rt-logo img {
+	width: 26px;
+	height: 26px;
+	object-fit: contain;
+}
+.rt-company {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--ink);
+	line-height: 1.2;
+}
+.rt-position {
+	color: var(--ink-soft);
+	font-size: 0.95rem;
+	margin-top: 2px;
+}
+.rt-team {
+	color: var(--ink-mute);
+	font-size: 0.85rem;
+	margin-top: 2px;
+}
+.rt-description {
+	color: var(--ink-soft);
+	font-size: 0.95rem;
+	line-height: 1.65;
+	margin: 4px 0 0;
+}
+.rt-internship {
+	margin-top: 12px;
+	padding-left: 14px;
+	border-left: 2px dashed var(--rule);
+	color: var(--ink-mute);
+	line-height: 1.6;
+}
+.rt-internship-label {
+	font-size: 0.7rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-mute);
+	font-weight: 500;
+	margin-bottom: 3px;
+}
+.rt-internship-desc {
+	color: var(--ink-mute);
+	font-size: 0.88rem;
+}

@@ -1,0 +1,13 @@
+{
+  "_note": "Site-wide behavior toggles. Change any value and the site adapts on next reload.",
+  "timeOfDay": {
+    "enabled": true
+  },
+  "commandPalette": {
+    "enabled": true,
+    "hotkey": "k"
+  },
+  "scrollReveals": {
+    "enabled": true
+  }
+}

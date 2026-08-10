@@ -1,0 +1,243 @@
+{
+  "items": [
+    {
+      "id": "cmu-matm",
+      "title": "Multi-Agent Transactive Memory (MATM)",
+      "date": "Aug 2025 – Jan 2026",
+      "institute": "Carnegie Mellon University",
+      "guide": "Assoc. Prof. Fernando Diaz — LTI, CMU",
+      "authors": "To Eun Kim, Xuhong He, Dishank Jain, Ambuj Agrawal, Negar Arabzadeh, Fernando Diaz",
+      "link": "https://arxiv.org/pdf/2606.19911",
+      "codelink": "https://github.com/kimdanny/matm",
+      "category": "Agents",
+      "status": "published",
+      "featured": true,
+      "description": [
+        "Proposed Multi-Agent Transactive Memory (MATM): a framework for population-level storage and retrieval of agent-generated action-observation trajectories — extending retrieval-augmented generation from a single agent to an entire agent population.",
+        "Producer agents contribute solved trajectories to a shared repository; consumer agents retrieve them at inference. No coordination, no joint training. State-conditioned indexing with window size 5, plus LTRT (learning-to-rank trajectories) rerankers trained on marginal-utility labels — FFN (pointwise), LambdaMART (pairwise) and SVMRank (pairwise).",
+        "On ALFWorld, single-stage retrieval lifted success rate from 47% → 55%; LTR reranking with SVMRank pushed it to 64% while cutting avg steps to 10.3. WebArena gains were more modest (20.5% vs. 18.2% baseline). Performance improves monotonically with index size and generalises across strong/weak consumers and across tasks."
+      ],
+      "keywords": [
+        "MATM",
+        "Multi-Agent",
+        "Transactive Memory",
+        "Agents",
+        "Trajectory Retrieval",
+        "Learning to Rank",
+        "ALFWorld",
+        "WebArena",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "netflix-audio-retrieval",
+      "title": "Multilingual Audio Retrieval for Synthetic Dubbing",
+      "date": "May 2025 – Aug 2025",
+      "institute": "Netflix",
+      "guide": "Netflix Localization Team",
+      "category": "Speech",
+      "status": "industry",
+      "description": [
+        "Built a full-catalog audio retrieval system at Netflix to choose reference clips for style/emotion transfer from English to target languages in synthetic dubbing; fine-tuned wav2vec2-2B with contrastive loss for multilingual dubbing embeddings.",
+        "Made an auto evaluation suite to automate the process of finding models/setups/hyperparameters that give better dubs in the context of emotion/speaker-style matching. Followed it up with a human evaluation study on Labelbox as well.",
+        "Evaluations show an improvement of ~7.5% with auto evals and ~13% win rate with human preference (CMOS: +0.2) in the synthetic voice. The fine-tuned embedding model outperformed all off-the-shelf models."
+      ],
+      "keywords": [
+        "Audio Retrieval",
+        "Synthetic Dubbing",
+        "wav2vec2",
+        "Contrastive Loss",
+        "Multilingual Embeddings",
+        "Evaluation Suite",
+        "Human Preference",
+        "Netflix",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cmu-granular-preference",
+      "title": "Granular Preference-Based Feedback of Generated Text",
+      "date": "Sep 2024 – Present",
+      "institute": "Carnegie Mellon University",
+      "guide": "Assoc. Prof. Fernando Diaz — LTI, CMU",
+      "codelink": "https://github.com/shaily99/gpa",
+      "category": "LLM Eval",
+      "status": "in_progress",
+      "description": [
+        "Worked as a Research Assistant under Dr. Fernando Diaz — proposing a new evaluation framework that focuses on capturing granular and implicit human preferences through targeted masking and infilling.",
+        "Results show an increase in inter-annotator agreement, lower cognitive overload, and increased overall quality of human annotation."
+      ],
+      "keywords": [
+        "Granular Preference",
+        "Preference Data",
+        "RLHF",
+        "Pytorch",
+        "LLM",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cmu-emo-tts",
+      "title": "Emotional Speech Generation",
+      "date": "Feb 2025 – Apr 2025",
+      "institute": "Carnegie Mellon University",
+      "guide": "Prof. Shinji Watanabe — LTI, CMU",
+      "link": "https://drive.google.com/file/d/1EbLpg317E5ahHUPr4-NKJEHsrxVzZJv2/view?usp=sharing",
+      "codelink": "https://github.com/ambuj-krishna-agrawal/emo-tts",
+      "category": "Speech",
+      "status": "completed",
+      "description": [
+        "Developed a cascaded TTS pipeline that uses few-shot LLM prompting and the EmotiVoice model to produce speech with controllable emotional intensity.",
+        "Designed objective metrics to quantify emotional expressiveness and benchmarked performance against Tacotron 2 and VITS, demonstrating improved similarity and naturalness."
+      ],
+      "keywords": [
+        "Emotional Speech Generation",
+        "Text-to-Speech",
+        "EmotiVoice",
+        "Tacotron 2",
+        "VITS",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cmu-routers",
+      "title": "Routers in LLMs",
+      "date": "Oct 2024 – Dec 2024",
+      "institute": "Carnegie Mellon University",
+      "category": "LLM Eval",
+      "status": "completed",
+      "description": [
+        "Developed a novel method to obtain synthetic preference data between open-source models with scarce existing preference data.",
+        "Built routers by fine-tuning Llama models and using matrix factorization on the new data to enhance routing; tested on GSM8K."
+      ],
+      "keywords": [
+        "Routers",
+        "Preference Data",
+        "Synthetic Data",
+        "Pytorch",
+        "LLM",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cmu-web-agents",
+      "title": "Multimodal Web Agents",
+      "date": "Sep 2024 – Dec 2024",
+      "institute": "Carnegie Mellon University",
+      "category": "Agents",
+      "status": "completed",
+      "description": [
+        "Developed an ensemble of verifier agents using a tree search algorithm to address web-agent inefficiencies by pruning unnecessary paths, improving resource efficiency and accuracy.",
+        "Benchmarked on the VisualWebArena dataset, enhancing the best-performing paper."
+      ],
+      "keywords": [
+        "Multimodal Web Agents",
+        "Computer Vision",
+        "Agents",
+        "Pytorch",
+        "LLM",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "cmu-rag",
+      "title": "RAG-Chatbot",
+      "date": "Oct 2024",
+      "institute": "Carnegie Mellon University",
+      "category": "RAG",
+      "status": "completed",
+      "description": [
+        "In a team of three, developed a RAG pipeline using concepts like multi-query, cross-encoders, lost-in-the-middle, BM25, and dense vector embeddings with LangChain.",
+        "Scraped over 5,000 documents using Selenium to answer the latest questions about Pittsburgh."
+      ],
+      "keywords": [
+        "RAG",
+        "Retrieval Augmented Generation",
+        "LangChain",
+        "Dense Retrieval",
+        "BM25",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "iiita-slam",
+      "title": "SLAM and Map Learning using Hybrid Semantic Graph Optimization",
+      "date": "Jan 2020 – Jul 2020",
+      "institute": "Indian Institute of Information Technology, Allahabad",
+      "guide": "Asst. Prof. Rahul Kala — Dept. of Information Technology",
+      "link": "https://ieeexplore.ieee.org/abstract/document/9837164",
+      "codelink": "https://github.com/drv-agwl/Hybrid-SPTAM",
+      "category": "Vision",
+      "status": "published",
+      "featured": true,
+      "description": [
+        "Improved the localization accuracy of V-SLAM by injecting semantic information of detected corner points (using L-CNN). Detected objects in a scene were used for place recognition and correspondence matching, which further enhanced the semantic information provided to the V-SLAM module."
+      ],
+      "keywords": [
+        "V-SLAM",
+        "Hybrid-SPTAM",
+        "Visual simultaneous localization and mapping",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "iitbhu-predictive",
+      "title": "Research Internship — Predictive Process Management",
+      "date": "May 2019 – Jul 2019",
+      "institute": "IIT (BHU) Varanasi",
+      "guide": "Prof. K.K. Shukla — CSE",
+      "link": "https://drive.google.com/file/d/1xNPQbf-kt0Tz7Wtdro4BT8KNBSoHfh0w/view?usp=sharing",
+      "codelink": "https://github.com/ambuj-krishna-agrawal/predictive_process_management",
+      "category": "Time Series",
+      "status": "completed",
+      "description": [
+        "Developed a robust high-accuracy model on bpi-12 and helpdesk data to improve upon the results from the original research paper on Predictive Business Monitoring with LSTM and attention-layer based models."
+      ],
+      "keywords": [
+        "Predictive Process Management",
+        "Time Series",
+        "LSTM",
+        "bpi",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "iiita-social-distancing",
+      "title": "Monitoring Social Distancing with AI",
+      "date": "Jul 2020 – Jan 2021",
+      "institute": "Indian Institute of Information Technology, Allahabad",
+      "guide": "Prof. Pavan Chakraborty — Dept. of Information Technology",
+      "codelink": "https://github.com/zerefwayne/SocialDistancingMonitor",
+      "category": "Vision",
+      "status": "completed",
+      "description": [
+        "Developed a technique that transforms the footage into a 3D panoptic scene, combining SSDs for pedestrian detection and then applying perspective transformation. This final 3D projection enabled us to accurately count instances where people breached safe distances, even under low-resolution feed and challenging camera angles."
+      ],
+      "keywords": [
+        "Social distancing",
+        "SSD",
+        "Panoptic",
+        "Ambuj Agrawal"
+      ]
+    },
+    {
+      "id": "iiita-lowlight",
+      "title": "Object Detection in Low-Light Conditions",
+      "date": "Jul 2019 – Jan 2020",
+      "institute": "Indian Institute of Information Technology, Allahabad",
+      "guide": "Assoc. Prof. Satish Kumar Singh — Dept. of Information Technology",
+      "category": "Vision",
+      "status": "completed",
+      "description": [
+        "Developed a model combining inputs from both visible RGB and thermal images and running them through SSD to predict bounding boxes better than either individually trained modality. The objective was to improve object detection for vehicles during night and prevent accidents."
+      ],
+      "keywords": [
+        "Object detection",
+        "Low-light",
+        "RGB + thermal",
+        "SSD",
+        "Ambuj Agrawal"
+      ]
+    }
+  ]
+}

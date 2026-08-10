@@ -1,39 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NAV, PROFILE } from "../../lib/content";
 
 import "./styles/footer.css";
 
 const Footer = () => {
+	const year = new Date().getFullYear();
 	return (
-		<React.Fragment>
-			<div className="footer">
-				<div className="footer-links">
-					<ul className="footer-nav-link-list">
-						<li className="footer-nav-link-item">
-							<Link to="/">Home</Link>
+		<footer className="footer">
+			<div className="footer-row">
+				<div className="footer-brand serif">— {PROFILE.name}</div>
+				<ul className="footer-nav">
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					{NAV.map((n) => (
+						<li key={n.key}>
+							<Link to={n.href}>{n.label}</Link>
 						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/articles">ML Research</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/mlprojects">AI Full Stack</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/projects">Dev Projects</Link>
-						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/about">About me</Link>
-						</li>
-					</ul>
-				</div>
-
-				<div className="footer-credits">
-					<div className="footer-credits-text">
-						2025 - Ambuj Krishna Agrawal
-					</div>
-				</div>
+					))}
+				</ul>
 			</div>
-		</React.Fragment>
+			<div className="footer-note">
+				<div className="footer-note-left">
+					<span>{year}</span>
+					<span>{PROFILE.location}</span>
+				</div>
+				<a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
+			</div>
+		</footer>
 	);
 };
 

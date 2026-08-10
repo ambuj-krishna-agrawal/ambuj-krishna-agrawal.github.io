@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "key": "articles",   "label": "Research",     "href": "/articles" },
+    { "key": "mlprojects", "label": "AI Products",  "href": "/mlprojects" },
+    { "key": "projects",   "label": "Engineering",  "href": "/projects" },
+    { "key": "about",      "label": "About",        "href": "/about" }
+  ]
+}

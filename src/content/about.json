@@ -1,0 +1,10 @@
+{
+  "_note": "Fill in `sections` with your own words. Each section is { title, body }. Leave the array empty to hide this block. Edit `navRoles` to control the italic role line under the greeting.",
+  "greeting": "Hello, I'm Ambuj",
+  "image": "/about.jpg",
+  "navRoles": [
+    "Applied AI Engineer at Snowflake",
+    "MS in Machine Learning (NLP), Carnegie Mellon"
+  ],
+  "sections": []
+}

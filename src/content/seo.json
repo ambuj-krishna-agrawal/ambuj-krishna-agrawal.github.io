@@ -1,0 +1,32 @@
+{
+  "home": {
+    "title": "Ambuj Krishna Agrawal — ML Researcher & AI Builder",
+    "description": "ML researcher at CMU LTI (LLM eval, RAG, agents) with 3+ years of backend at CRED and LinkedIn. Portfolio, research and AI products.",
+    "keywords": ["Ambuj Krishna Agrawal", "ML Researcher", "AI Builder", "CMU LTI", "LLM Evaluation"]
+  },
+  "about": {
+    "title": "About — Ambuj Krishna Agrawal",
+    "description": "About Ambuj: ML researcher, engineer, and builder — background, interests and how to reach me.",
+    "keywords": ["Ambuj", "About", "ML Researcher"]
+  },
+  "research": {
+    "title": "Research — Ambuj Krishna Agrawal",
+    "description": "Chronological collection of research projects across LLM evaluation, speech, RAG, agents and vision.",
+    "keywords": ["ML Research", "LLM Evaluation", "RAG", "Agents", "Speech"]
+  },
+  "ai-products": {
+    "title": "AI Products — Ambuj Krishna Agrawal",
+    "description": "AI products and startups built with real users in mind.",
+    "keywords": ["AI Products", "AI Startups", "Full-stack AI"]
+  },
+  "projects": {
+    "title": "Engineering — Ambuj Krishna Agrawal",
+    "description": "Engineering work and hackathon projects across CRED, LinkedIn and personal builds.",
+    "keywords": ["Backend", "Security", "CRED", "LinkedIn", "Hackathons"]
+  },
+  "contact": {
+    "title": "Contact — Ambuj Krishna Agrawal",
+    "description": "The inbox is quiet and always open — research chats, hiring, or a quick hello.",
+    "keywords": ["Contact", "Email", "Ambuj"]
+  }
+}

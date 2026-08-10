@@ -1,0 +1,23 @@
+{
+  "name": "Ambuj Krishna Agrawal",
+  "shortName": "Ambuj",
+  "siteTitle": "Ambuj Krishna Agrawal",
+  "tagline": "Applied AI Engineer & ML Researcher",
+  "email": "ambujagrawal741@gmail.com",
+  "location": "Mountain View, CA",
+  "timezone": "America/Los_Angeles",
+  "resumeUrl": "https://drive.google.com/file/d/1ZMTYInZLOGM-644TizNRcP4Q2T0TN_Nm/view?usp=sharing",
+  "avatar": "/about.jpg",
+  "status": {
+    "active": true,
+    "label": "Applied AI Engineer @ Snowflake",
+    "detail": "AI agent memory for data analysts"
+  },
+  "socials": {
+    "github": "https://github.com/ambuj-krishna-agrawal",
+    "linkedin": "https://www.linkedin.com/in/ambuj-krishna-agrawal",
+    "topmate": "https://topmate.io/ambuj_agrawal11",
+    "twitter": "https://twitter.com/aka_saturn",
+    "instagram": "https://www.instagram.com/ambujagrawal007"
+  }
+}

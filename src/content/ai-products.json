@@ -1,0 +1,105 @@
+{
+  "_note": "AI products. `launched:true` renders as a full-width FeaturedProduct case-study; `launched:false` renders smaller under 'Also built'. Order below is preserved.",
+  "items": [
+    {
+      "id": "agentlab",
+      "name": "AgentLab",
+      "tagline": "Turn any agent run into a structured tree of primitives — record, replay, perturb, and evaluate the pieces instead of the blob.",
+      "year": "Jun 2026 – Present",
+      "role": "Author, open-source",
+      "launched": true,
+      "accent": "ember",
+      "icon": "robot",
+      "overview": "Agents today are black boxes: one accuracy number at the end and no way to ask what if just this one step had gone differently. AgentLab intercepts every LLM and tool call at the network layer — a single httpx patch that works with any Python LLM SDK — and reconstructs the run as a typed tree of primitives you can walk, diff, and re-execute deterministically. Once a run is structured you can grade each node in isolation, branch off from any node into a live what-if fork, and generate the paired-example data needed to improve individual primitives instead of retraining the whole agent.",
+      "links": [
+        { "label": "Website", "url": "https://agentlab-product.vercel.app/" },
+        { "label": "PyPI", "url": "https://libraries.io/pypi/agentic-lab" },
+        { "label": "GitHub", "url": "https://github.com/ambuj-krishna-agrawal/agentlab" }
+      ],
+      "features": [
+        {
+          "title": "Universal capture, no SDK changes",
+          "detail": "One httpx patch intercepts OpenAI, Anthropic, Google and Bedrock byte-perfect. Two lines to enable: `with al.record():`."
+        },
+        {
+          "title": "Deterministic replay and what-if branches",
+          "detail": "Any node can be edited; the past stays cached, the future re-runs live against the real model. Combine perturbations across nodes to answer \"what if just this one step had gone differently?\""
+        },
+        {
+          "title": "Per-primitive evaluation and learning",
+          "detail": "Score retriever, planner and synthesis separately. Perturbation runs produce paired preference data — fine-tune one primitive at a time instead of retraining the whole agent."
+        },
+        {
+          "title": "Production-ready",
+          "detail": "Under 1% overhead per LLM call. Ships with a UI, a CLI, an eval suite, and a pytest plugin so recorded runs become CI regression tests."
+        }
+      ]
+    },
+    {
+      "id": "gaplens",
+      "name": "Gaplens",
+      "tagline": "A reader for technical papers that skips what you already know and drills into what you don't.",
+      "year": "Jan 2026",
+      "role": "Founder",
+      "launched": true,
+      "accent": "moss",
+      "icon": "book",
+      "overview": "Every reader has a different background, but every reading tool treats them the same. Gaplens builds a per-concept profile of what a reader already knows — from a short quiz, an optional résumé parse, and an optional Google Scholar link that ingests their real publications — and feeds that profile into every explanation. Highlight any passage on a technical PDF and get an answer pitched exactly at your level, plus a running list of the knowledge gaps you're actively closing.",
+      "links": [
+        { "label": "Website", "url": "https://gaplens-frontend.vercel.app/" }
+      ],
+      "features": [
+        {
+          "title": "Evidence-based calibration",
+          "detail": "Résumé → structured skills. Google Scholar → domains from your actual publications. A four-question quiz fills the rest. Composed into per-concept expertise scores that update as you read."
+        },
+        {
+          "title": "Highlight-and-ask, in context",
+          "detail": "The text physically around your highlight is the primary signal, augmented by retrieval over the same paper (LanceDB, section-breadcrumb metadata). Three depth levels — Simple, Moderate, Detailed."
+        },
+        {
+          "title": "Knowledge-gap tracking",
+          "detail": "Every unfamiliar concept the profile can't explain becomes a tracked gap with severity and follow-up material — a persistent view of what you're actively learning."
+        },
+        {
+          "title": "Production stack",
+          "detail": "Next.js on Vercel, FastAPI on GCP. Async workers (SQS / PubSub) for résumé + Scholar, LanceDB for vector search, DynamoDB for metadata, S3 / GCS for PDFs, Clerk for auth, Sentry for errors."
+        }
+      ]
+    },
+    {
+      "id": "hellosec",
+      "name": "HelloSec.AI",
+      "tagline": "End-to-end product security platform with plug-and-protect AI security agents.",
+      "year": "2025",
+      "launched": false,
+      "role": "Co-builder at CMU AI/VS",
+      "accent": "stone",
+      "icon": "shield",
+      "cover": "/hellosec.avif",
+      "summary": "End-to-end product security platform with plug-and-protect AI security agents. Built during CMU AI/VS. Not launched publicly.",
+      "links": [
+        { "label": "CMU AI/VS", "url": "https://www.linkedin.com/posts/aseemshrey_aivs-cmu-aivs-activity-7320618647645802496-Vfgu" }
+      ],
+      "features": [
+        {
+          "title": "Plug-and-Protect Security Agents",
+          "detail": "AI-powered agents deploy instantly into development and production environments — no lengthy configuration or onboarding required. Security is active from day one."
+        },
+        {
+          "title": "Comprehensive Security Coverage",
+          "detail": "Threat Agent — design-time security and compliance checks. Browser Agent — continuous vulnerability scanning in live user flows. Hack Agent — smart attack simulation with risk-based vulnerability ranking."
+        },
+        {
+          "title": "End-to-End Security Testing",
+          "detail": "Comprehensive, automated end-to-end security testing maps your entire web application architecture and user flows — every component and interaction point is assessed for risk."
+        },
+        {
+          "title": "CMU AI/VS Presentation Experience",
+          "detail": "Presented at the AI/VS event at Carnegie Mellon University; gained experience conversing face-to-face with startup investors and understanding their expectations for AI security startups."
+        }
+      ],
+      "quote": "HelloSec AI makes robust security accessible and effortless by delivering plug-and-protect AI security agents that integrate instantly — no complex setups required."
+    }
+  ]
+}

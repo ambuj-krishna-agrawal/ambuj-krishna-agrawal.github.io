@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "cmu-miis",
+      "title": "M.S. in Intelligent Information Systems",
+      "institute": "Carnegie Mellon University — Language Technologies Institute, School of Computer Science",
+      "date": "Aug 2024 – Present",
+      "gpa": "3.92 / 4",
+      "courses": [
+        "Conversational AI",
+        "AI Venture Studios",
+        "Search Engines & Recommender Systems",
+        "Advanced Natural Language Processing",
+        "Multimodal Machine Learning",
+        "Introduction to Machine Learning"
+      ]
+    },
+    {
+      "id": "iiita-btech",
+      "title": "B.Tech (Honors) in Information Technology",
+      "institute": "Indian Institute of Information Technology, Allahabad",
+      "date": "Jul 2017 – Jun 2021",
+      "gpa": "8.82 / 10",
+      "courses": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Image Processing",
+        "Data Structures",
+        "Algorithms",
+        "Operating Systems",
+        "Computer Networks",
+        "Software Engineering",
+        "Database Management Systems"
+      ]
+    }
+  ],
+  "certifications": [
+    { "name": "Sequence Models", "provider": "DeepLearning.AI", "date": "May 2024", "url": "https://www.coursera.org/account/accomplishments/verify/D6FEKSAJS8D9" },
+    { "name": "Convolutional Neural Networks", "provider": "DeepLearning.AI", "date": "Mar 2019", "url": "https://www.coursera.org/account/accomplishments/verify/MHBM4J6JKHUX" },
+    { "name": "Improving Deep Neural Networks", "provider": "DeepLearning.AI", "date": "Feb 2019", "url": "https://www.coursera.org/account/accomplishments/verify/TGGFS6W839TM" },
+    { "name": "Neural Networks and Deep Learning", "provider": "DeepLearning.AI", "date": "Feb 2019", "url": "https://www.coursera.org/account/accomplishments/verify/VHWF4AY5FEVP" },
+    { "name": "Structuring Machine Learning Projects", "provider": "DeepLearning.AI", "date": "Feb 2019", "url": "https://www.coursera.org/account/accomplishments/verify/3SUE37K9QEC5" },
+    { "name": "Machine Learning", "provider": "Stanford", "date": "Jan 2019", "url": "https://www.coursera.org/account/accomplishments/verify/2PPS4UYUN6H7" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "greeting": "Hi, I'm Ambuj.",
+  "intro": "Applied AI Engineer at Snowflake, building the memory layer that lets AI agents actually operate on company data. Master's in Machine Learning (NLP) from Carnegie Mellon. Backend engineer for the years before that.",
+  "longIntro": "At Snowflake I'm building representations for AI agent memory — knowledge graphs, extracted skills, table metadata and domain understanding — over structured and unstructured company data. Before that, an MS at CMU LTI working on LLM evaluation and multi-agent memory (MATM); an ML internship at Netflix on speech systems for synthetic dubbing; and years of backend at CRED and LinkedIn. I also build my own AI products on the side (see below).",
+  "highlights": [
+    {
+      "company": "Snowflake",
+      "logo": "/snowflake.png",
+      "accent": "ember",
+      "position": "Applied AI Engineer",
+      "date": "Jan 2026 – Present",
+      "summary": "Representations for AI agent memory — knowledge graphs, skills, table metadata, domain extraction — over structured & unstructured company data."
+    },
+    {
+      "company": "CMU LTI",
+      "logo": "/cmu.svg",
+      "accent": "moss",
+      "position": "Research Assistant",
+      "date": "Sep 2024 – Jan 2026",
+      "summary": "LLM evaluation with granular human preference feedback under Dr. Fernando Diaz. Co-authored MATM on population-level trajectory sharing across agents.",
+      "impact": "MATM — ALFWorld success 47% → 64%"
+    },
+    {
+      "company": "Netflix",
+      "logo": "/netflix.svg",
+      "accent": "moss",
+      "position": "ML Engineering Intern",
+      "date": "Summer 2025",
+      "summary": "Full-catalog audio retrieval for style / emotion transfer in synthetic dubbing.",
+      "impact": "~13% win rate in human preference for TTS"
+    },
+    {
+      "company": "CRED and LinkedIn",
+      "logo": "/cred_1.svg",
+      "accent": "stone",
+      "position": "Backend Engineering",
+      "date": "3+ years, 2020 – 2024",
+      "summary": "Bill-payments platform at CRED (5M+ MAU). Account Protection team at LinkedIn.",
+      "impact": "Products shipped to millions"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+.cmdk-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(30, 20, 8, 0.35);
+	backdrop-filter: blur(3px);
+	z-index: 100;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: 12vh;
+	animation: cmdk-in 160ms ease-out;
+}
+@keyframes cmdk-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.cmdk-panel {
+	width: min(640px, 92vw);
+	background: var(--bg-elev);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	box-shadow: 0 24px 60px rgba(30, 20, 8, 0.35);
+	overflow: hidden;
+	animation: cmdk-panel-in 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+@keyframes cmdk-panel-in {
+	from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+	to { opacity: 1; transform: none; }
+}
+
+.cmdk-search {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px 18px;
+	border-bottom: 1px solid var(--card-border);
+	color: var(--ink-mute);
+}
+.cmdk-search input {
+	flex: 1;
+	border: none;
+	background: transparent;
+	outline: none;
+	font-family: var(--font-body);
+	font-size: 1.05rem;
+	color: var(--ink);
+}
+.cmdk-search input::placeholder { color: var(--ink-mute); }
+.cmdk-hint {
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--ink-mute);
+	border: 1px solid var(--card-border);
+	padding: 2px 8px;
+	border-radius: 6px;
+}
+
+.cmdk-results {
+	list-style: none;
+	margin: 0;
+	padding: 6px;
+	max-height: 52vh;
+	overflow-y: auto;
+}
+.cmdk-item {
+	display: grid;
+	grid-template-columns: 110px 1fr auto auto;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: var(--ink-soft);
+	transition: background 120ms ease, color 120ms ease;
+}
+.cmdk-item.is-active {
+	background: var(--ember-soft);
+	color: var(--ink);
+}
+.cmdk-item.is-active .cmdk-arrow { color: var(--ember); }
+.cmdk-section {
+	font-size: 0.7rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink-mute);
+	font-weight: 600;
+}
+.cmdk-title {
+	font-family: var(--font-display);
+	font-size: 1rem;
+	color: var(--ink);
+	line-height: 1.2;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cmdk-hint2 {
+	font-size: 0.78rem;
+	color: var(--ink-mute);
+	max-width: 220px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cmdk-arrow {
+	color: var(--ink-mute);
+	opacity: 0.6;
+	font-size: 0.85rem;
+}
+
+.cmdk-empty {
+	list-style: none;
+	padding: 24px;
+	text-align: center;
+	color: var(--ink-mute);
+	font-family: var(--font-display);
+}
+
+.cmdk-foot {
+	display: flex;
+	gap: 18px;
+	padding: 10px 18px;
+	font-size: 0.72rem;
+	color: var(--ink-mute);
+	border-top: 1px solid var(--card-border);
+	background: var(--bg-alt);
+}
+.cmdk-foot kbd {
+	background: var(--paper);
+	border: 1px solid var(--card-border);
+	border-radius: 4px;
+	padding: 1px 6px;
+	font-size: 0.7rem;
+	font-family: inherit;
+	margin-right: 3px;
+}
+
+@media (max-width: 640px) {
+	.cmdk-item { grid-template-columns: 80px 1fr auto; }
+	.cmdk-hint2 { display: none; }
+	.cmdk-foot { gap: 12px; padding: 10px 14px; font-size: 0.65rem; }
+}
+
+/* Highlight the entry we scrolled to */
+.entry-flash {
+	animation: entry-flash 1.6s ease-out;
+}
+@keyframes entry-flash {
+	0%   { box-shadow: 0 0 0 0 var(--ember-soft), 0 0 0 0 var(--ember); }
+	20%  { box-shadow: 0 0 0 8px var(--ember-soft), 0 0 0 2px var(--ember); }
+	100% { box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent; }
+}

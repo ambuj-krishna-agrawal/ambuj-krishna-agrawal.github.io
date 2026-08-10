@@ -3,50 +3,59 @@ import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import AllProjects from "../components/projects/allProjects";
+import SelectedProject from "../components/projects/selectedProject";
+import ArchiveList from "../components/projects/archiveList";
+import Reveal from "../components/common/reveal";
 
-import INFO from "../data/user";
-import SEO from "../data/seo";
-import { initScrollReveal, addElementAnimations } from "../utils/animations";
+import {
+	DEV_PROJECTS_SELECTED,
+	DEV_PROJECTS_ARCHIVE,
+	seoFor,
+} from "../lib/content";
 
 import "./styles/projects.css";
 
 const Projects = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useEffect(() => { window.scrollTo(0, 0); }, []);
 
-	const currentSEO = SEO.find((item) => item.page === "software");
+	const s = seoFor("projects");
 
 	return (
-		<React.Fragment>
+		<>
 			<Helmet>
-				<title>{`Projects | ${INFO.main.title}`}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<title>{s.title}</title>
+				<meta name="description" content={s.description} />
+				<meta name="keywords" content={(s.keywords || []).join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
 				<NavBar active="projects" />
-				<div className="content-wrapper">
-					<div className="projects-container">
-						<div className="title projects-title">
-							Things I've made
-						</div>
-						<div className="subtitle projects-subtitle">
-							Below is a compilation of significant projects I've undertaken, spanning both professional endeavors within the industry and personal pursuits.
-						</div>
-						<AllProjects />
+				<div className="content-wrapper page-inner">
+					<h1 className="title">Engineering</h1>
+					<p className="subtitle">
+						Engineering work I've done — company products at CRED and LinkedIn, hackathon wins, and side builds. The notable ones sit at the top; the rest are archived below.
+					</p>
+
+					<h2 className="section-heading serif" style={{ marginTop: "var(--space-xl)" }}>
+						<span className="section-heading-underline">Selected</span>
+					</h2>
+					<div className="projects-selected-grid">
+						{DEV_PROJECTS_SELECTED.map((p, i) => (
+							<Reveal key={p.id} delay={i * 70}>
+								<SelectedProject project={p} />
+							</Reveal>
+						))}
 					</div>
-					<div className="page-footer">
-						<Footer />
-					</div>
+
+					<h2 className="section-heading serif" style={{ marginTop: "var(--space-xxl)" }}>
+						<span className="section-heading-underline">Archive</span>
+					</h2>
+					<ArchiveList items={DEV_PROJECTS_ARCHIVE} />
+
+					<Footer />
 				</div>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 

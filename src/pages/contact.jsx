@@ -1,90 +1,95 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
 
-import INFO from "../data/user";
-import SEO from "../data/seo";
+import { PROFILE, seoFor } from "../lib/content";
 
 import "./styles/contact.css";
 
-const Contact = () => {
+const useLocalTime = (tz) => {
+	const [now, setNow] = useState("");
 	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+		const fmt = () => {
+			try {
+				const t = new Date().toLocaleTimeString("en-US", {
+					hour: "numeric",
+					minute: "2-digit",
+					timeZone: tz,
+				});
+				setNow(t);
+			} catch {
+				setNow("");
+			}
+		};
+		fmt();
+		const id = setInterval(fmt, 30000);
+		return () => clearInterval(id);
+	}, [tz]);
+	return now;
+};
 
-	const currentSEO = SEO.find((item) => item.page === "contact");
+const Contact = () => {
+	useEffect(() => { window.scrollTo(0, 0); }, []);
+	const s = seoFor("contact");
+	const localTime = useLocalTime(PROFILE.timezone);
 
 	return (
-		<React.Fragment>
+		<>
 			<Helmet>
-				<title>{`Contact | ${INFO.main.title}`}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<title>{s.title}</title>
+				<meta name="description" content={s.description} />
+				<meta name="keywords" content={(s.keywords || []).join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
 				<NavBar active="contact" />
-				<div className="content-wrapper">
-					<div className="contact-logo-container">
-						<div className="contact-logo">
-							<Logo width={46} />
-						</div>
+				<div className="content-wrapper page-inner contact">
+					<h1 className="title">Say hi.</h1>
+					<p className="subtitle">
+						The inbox is quiet and always open — best for research chats, hiring,
+						or "can I pick your brain for 15 minutes".
+					</p>
+
+					<div className="contact-cards">
+						<a className="contact-card contact-card--primary" href={`mailto:${PROFILE.email}`}>
+							<FontAwesomeIcon icon={faEnvelope} />
+							<div>
+								<div className="contact-card-label">Email</div>
+								<div className="contact-card-value">{PROFILE.email}</div>
+							</div>
+						</a>
+						<a className="contact-card" href={PROFILE.socials.linkedin} target="_blank" rel="noreferrer">
+							<FontAwesomeIcon icon={faLinkedin} />
+							<div>
+								<div className="contact-card-label">LinkedIn</div>
+								<div className="contact-card-value">Connect / DM</div>
+							</div>
+						</a>
+						<a className="contact-card" href={PROFILE.socials.github} target="_blank" rel="noreferrer">
+							<FontAwesomeIcon icon={faGithub} />
+							<div>
+								<div className="contact-card-label">GitHub</div>
+								<div className="contact-card-value">ambuj-krishna-agrawal</div>
+							</div>
+						</a>
 					</div>
 
-					<div className="contact-container">
-						<div className="title contact-title">
-							Let's Get in Touch: Ways to Connect with Me
-						</div>
-
-						<div className="subtitle contact-subtitle">
-							Thank you for your interest in getting in touch with
-							me. I welcome your feedback, questions, and
-							suggestions. If you have a specific question or
-							comment, please feel free to email me directly at
-							&nbsp;{" "}
-							<a href={`mailto:${INFO.main.email}`}>
-								{INFO.main.email}
-							</a>
-							. I make an effort to respond to all messages within
-							24 hours, although it may take me longer during busy
-							periods. Alternatively, you can use the contact form
-							on my website to get in touch. Simply fill out the
-							required fields and I'll get back to you as soon as
-							possible. Finally, if you prefer to connect on
-							social media, you can find me on{" "}
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{INFO.socials.instagram}
-							</a>
-							. I post regular updates and engage with my
-							followers there, so don't hesitate to reach out.
-							Thanks again for your interest, and I look forward
-							to hearing from you!
-						</div>
+					<div className="contact-time">
+						<FontAwesomeIcon icon={faClock} />
+						<span>
+							Local time in {PROFILE.location}: <strong>{localTime || "—"}</strong>
+						</span>
 					</div>
 
-					<div className="socials-container">
-						<div className="contact-socials">
-							<Socials />
-						</div>
-					</div>
-
-					<div className="page-footer">
-						<Footer />
-					</div>
+					<Footer />
 				</div>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 
