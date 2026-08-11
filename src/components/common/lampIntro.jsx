@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { subscribeToLamp } from "../../lib/lampControl";
 import "./styles/lampIntro.css";
 
 const STORAGE_KEY = "intro-seen-v1";
 
 const LampIntro = () => {
-	const [state, setState] = useState("hidden"); // hidden | dim | on | dismissed
+	// Default to "dim" (the dark room + lamp) so the very first thing ever
+	// painted is the intro, never a flash of the real page underneath.
+	// useLayoutEffect runs synchronously before the browser paints, so if
+	// the intro was already seen this session we flip to "dismissed" before
+	// anything is drawn on screen at all — no flash either way.
+	const [state, setState] = useState("dim"); // dim | on | dismissed
 	const [swayKey, setSwayKey] = useState(0);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (typeof window === "undefined") return;
 		const alreadySeen = sessionStorage.getItem(STORAGE_KEY);
 		const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -16,7 +21,6 @@ const LampIntro = () => {
 			setState("dismissed");
 			return;
 		}
-		setState("dim");
 		document.documentElement.classList.add("intro-locked");
 	}, []);
 
@@ -29,7 +33,7 @@ const LampIntro = () => {
 		});
 	}, []);
 
-	if (state === "dismissed" || state === "hidden") return null;
+	if (state === "dismissed") return null;
 
 	const turnOn = () => {
 		if (state !== "dim") return;
