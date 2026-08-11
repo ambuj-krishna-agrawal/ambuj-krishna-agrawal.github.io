@@ -10,6 +10,7 @@ import {
 	EXPERIENCE,
 	EDUCATION,
 } from "../../lib/content";
+import { subscribeToPalette } from "../../lib/paletteControl";
 import SETTINGS from "../../content/settings.json";
 
 import "./styles/commandPalette.css";
@@ -120,6 +121,11 @@ const CommandPalette = () => {
 		window.addEventListener("keydown", onKey);
 		return () => window.removeEventListener("keydown", onKey);
 	}, [enabled, hotkey]);
+
+	useEffect(() => {
+		if (!enabled) return;
+		return subscribeToPalette(() => setOpen(true));
+	}, [enabled]);
 
 	useEffect(() => {
 		if (!open) {

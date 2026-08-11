@@ -74,6 +74,31 @@
 .nav-item:hover { color: var(--ink); background: var(--stone-soft); }
 .nav-item--active { color: var(--ember); background: var(--ember-soft); }
 
+.nav-cmdk {
+	margin-left: 6px;
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	padding: 7px 10px;
+	background: transparent;
+	border: 1px solid var(--card-border);
+	border-radius: 999px;
+	color: var(--ink-mute);
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+.nav-cmdk kbd {
+	font-family: var(--font-body);
+	font-size: 0.78rem;
+	font-weight: 600;
+	line-height: 1;
+}
+.nav-cmdk:hover {
+	color: var(--ember);
+	border-color: var(--ember);
+	background: var(--ember-soft);
+}
+
 .nav-lamp {
 	margin-left: 6px;
 	width: 38px;
@@ -168,6 +193,8 @@
 	.nav-item { padding: 14px 16px; font-size: 1rem; }
 	.nav-cta { margin-left: 0; text-align: center; }
 	.nav-lamp { align-self: center; margin-left: 0; margin-top: 4px; }
+	/* Keyboard shortcut hint is meaningless on touch devices */
+	.nav-cmdk { display: none; }
 }
 
 body.nav-menu-open {

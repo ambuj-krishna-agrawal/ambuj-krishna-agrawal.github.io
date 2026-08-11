@@ -6,7 +6,11 @@ import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 
 import { NAV } from "../../lib/content";
 import { requestLampOff } from "../../lib/lampControl";
+import { requestPaletteOpen } from "../../lib/paletteControl";
 import "./styles/navBar.css";
+
+const isMac =
+	typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.platform);
 
 const NavBar = ({ active }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -60,6 +64,15 @@ const NavBar = ({ active }) => {
 							{item.label}
 						</Link>
 					))}
+					<button
+						className="nav-cmdk"
+						onClick={() => { close(); requestPaletteOpen(); }}
+						title="Search everything"
+						aria-label="Open search"
+					>
+						<kbd>{isMac ? "⌘" : "Ctrl"}</kbd>
+						<kbd>K</kbd>
+					</button>
 					<button
 						className="nav-lamp"
 						onClick={() => { close(); requestLampOff(); }}

@@ -123,6 +123,18 @@ a:hover {
 	color: var(--ember-hi);
 }
 
+::selection {
+	background: var(--ember);
+	color: #fdf6ea;
+}
+
+/* Visible only for keyboard navigation — mouse users never see it. */
+:focus-visible {
+	outline: 2px solid var(--ember);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
 .serif {
 	font-family: var(--font-display);
 	font-optical-sizing: auto;

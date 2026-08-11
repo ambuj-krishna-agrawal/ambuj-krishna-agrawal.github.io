@@ -85,7 +85,11 @@ html.intro-locked, html.intro-locked body {
 	flex-direction: column;
 	align-items: center;
 	color: inherit;
-	outline: none;
+}
+.lamp:focus-visible {
+	outline: 2px solid rgba(255, 210, 130, 0.8);
+	outline-offset: 6px;
+	border-radius: 12px;
 }
 
 .lamp-cord {
