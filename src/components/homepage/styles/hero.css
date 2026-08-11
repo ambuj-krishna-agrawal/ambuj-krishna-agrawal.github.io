@@ -26,14 +26,6 @@
 }
 .hero-cursor {
 	color: var(--gold);
-	text-shadow: 0 0 10px var(--gold-soft);
-	animation: hero-cursor-flicker 2.6s ease-in-out infinite;
-}
-@keyframes hero-cursor-flicker {
-	0%, 100% { opacity: 1; }
-	45% { opacity: 0.4; }
-	55% { opacity: 0.85; }
-	75% { opacity: 0.55; }
 }
 
 .hero-intro {
