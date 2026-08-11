@@ -51,7 +51,7 @@
 	--hover-shadow-color: rgba(0, 0, 0, 0.12);
 
 	/* ------- typography ------- */
-	--font-display: "Fraunces", "Newsreader", "Iowan Old Style", Georgia, serif;
+	--font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
 	--font-body: "Inter", "Open Sans", system-ui, sans-serif;
 	--primary-font: var(--font-body);
 	--secondary-font: var(--font-display);
